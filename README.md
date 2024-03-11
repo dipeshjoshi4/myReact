@@ -75,7 +75,7 @@ so what do render method => it converts the object(heading) into h1 and put into
 
 
 
-# for this HTML
+ for this HTML
 
 <div id="parent">
     <div id="child">
@@ -83,7 +83,7 @@ so what do render method => it converts the object(heading) into h1 and put into
         </div>
     </div>
 
-# this react code
+this react code
 
 const heading = React.createElement(
 "div",
