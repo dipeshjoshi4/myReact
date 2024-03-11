@@ -1,0 +1,19 @@
+{
+  "name": "react-course",
+  "version": "1.0.0",
+  "description": "this is my react-course with custom(npm)",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "\"dipesh",
+    "code\""
+  ],
+  "author": "dipesh",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
