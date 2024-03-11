@@ -121,18 +121,10 @@ React.createElement("h1", {}, "Hello World!!")
 );
 
 
-
-
-<<<<<<< HEAD
-# what is crossorigin in react cdn link
-
-=======
 # 3
 
-
-
 # whta is crossorigin in react cdn link
->>>>>>> 1d03b5f (some data change in readme.md file)
+
 => Web pages often make requests to load resources on other servers. Here is where CORS comes in. A cross-origin request
 is a request for a resource
 (e.g. style sheets, iframes, images, fonts, or scripts) from another domain.
