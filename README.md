@@ -77,14 +77,17 @@ so what do render method => it converts the object(heading) into h1 and put into
 
  for this HTML
 
+```HTML
 <div id="parent">
     <div id="child">
         <h1>Hello React in Deep</h1>
         </div>
     </div>
+```
 
 this react code
 
+```React
 const heading = React.createElement(
 "div",
 { id: "Parent" },
@@ -94,11 +97,12 @@ React.createElement(
 React.createElement("h1", {}, "Hello World!!")
 )
 );
-
+```
 
 
 # for this HTML
 
+```HTML
 <div id="parent">
     <div id="child">
         <h1>Hello React in Deep</h1>
@@ -107,6 +111,7 @@ React.createElement("h1", {}, "Hello World!!")
         <h1>Hello React in Deep</h1>
         </div>
     </div>
+```
 
 # this react code
 
