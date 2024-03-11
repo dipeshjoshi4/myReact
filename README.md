@@ -110,6 +110,7 @@ React.createElement("h1", {}, "Hello World!!")
 
 # this react code
 
+```React
 const heading = React.createElement(
 "div",
 { id: "Parent" },
@@ -119,7 +120,7 @@ React.createElement(
 React.createElement("h1", {}, "Hello World!!")
 )
 );
-
+```
 
 # 3
 
