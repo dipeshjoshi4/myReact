@@ -216,8 +216,8 @@ comes from node_modules
 
 
 
-<<<<<<< HEAD
-<!-- what is the difference between package.json and package-lock.json?-->
-=======
+
 # what is the difference between package.json and package-lock.json?
->>>>>>> 1d03b5f (some data change in readme.md file)
+
+
+>
