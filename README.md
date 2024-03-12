@@ -24,33 +24,39 @@ when we have many components in website if we click any one of them then page wi
 
 # for html add element in browser
 
+```HTML
 <div id="root">
     <h1>Hello World By HTML!</h1> 
     </div>
+```
 
 # for js add element in browser
 
+```JS
 <script>
         const root = document.getElementById("root")
         const heading = document.createElement("h1")
         heading.innerHTML = "Hello World By JS!!"
         root.appendChild(heading)
-    </script>
+</script>
+```
 
-so here we write html and js and make show the element in browserr .
-for the react we have to add browserto something because browser only understand html css js
+ => so here we write html and js and make show the element in browserr .
+ => for the react we have to add browserto something because browser only understand html css js
 
-in the browser add react we have to do this 
+ => in the browser add react we have to do this 
+
+ ```React script dependecy
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-You Can Check By Writing React in console. and you get many function and properties
+```
+=> You Can Check By Writing React in console. and you get many function and properties
 
 # What iS CDN => content delievery network
-react mady by developer and hosted but with this cdn link we can access
+- react mady by developer and hosted but with this cdn link we can access
 
 # CDN => 
-it refers to  geographically  dirstributed  group of servers that work together  to provide  fast delivery of internet content 
+ - it refers to  geographically  dirstributed  group of servers that work together  to provide  fast delivery of internet content 
 the main use of cdn is to deliver to content through a network of servers in a secure and efficient way
 a cdn is allows for the quick  transfer of  assest needed for loading  internet content,including HTML Pages,JS  files,style sheets,images and videos
 ex:font awesome
