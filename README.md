@@ -212,16 +212,25 @@ for install react dom command
 - and every dependecy have their own package.json
 
 # firstly we have dependecy script in our file so that we use create react and root render  so now after the script install in systsem
+```React
 import React from 'react';
 import { ReactDOM } from 'react-dom';
-
-comes from node_modules
-
-
-
-
+```
+- this comes from node_modules
 
 # what is the difference between package.json and package-lock.json?
 
+- package.json have dependecy and package-lock.json have too dependecy in  but package-lock.json have to maintain if their have 2 user work in same code its has to been intact means in terms of version they both have same version 
+
+- let understand by example
+
+- if person A doing some task and push into github and after sometime(let say after 6 month) person b add some fetures on that repo .
+  so during that time there will be some changes in React version because there is caret sign .
+
+- so both person have been same version that thing maintain by package-lock.json
+
+# 4
+
+- always Remember anything you write in js file wether that js file have react code or javascript code you have to mention that js file        in HTML file.keep intact with basic always.there is reason we will discuss about that so Remember
 
 >
