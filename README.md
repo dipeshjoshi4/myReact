@@ -185,9 +185,10 @@ package.json
 
 
 # what is node-modules
--in reactjs whteevr the dependecy you install that all are store in node-modules
+- in reactjs whteevr the dependecy you install that all are store in node-modules
 - in real-project there is so much dependecy inso so much file store is node_modules
--we dont give that file in production so for that we use to .gitignore and make it ignore this files
+- we dont give that file in production so for that we use to .gitignore and make it ignore this files
+- all the dependecy and packages which need to made react app it will be store here and their details will be there
 
 # what is sign in before dependcy in 
 ~ || ^ => whenevr a small updates comes this sign will be update the version .its called creat
@@ -231,6 +232,128 @@ import { ReactDOM } from 'react-dom';
 
 # 4
 
-- always Remember anything you write in js file wether that js file have react code or javascript code you have to mention that js file        in HTML file.keep intact with basic always.there is reason we will discuss about that so Remember
 
->
+- make a new npx file for react
+ - 1.first with npx
+ - 2.seconf with vite/parcel
+
+- with 
+```
+- npx create-react-app ReactFileName 
+```
+- taking more time 
+```
+cd ReactFileName  => said you are not react file so first go in the directory
+npm start => then run this command and execute
+```
+# what is difference between npx create-react-app or vite creat-react-app ?
+
+# file structure
+
+- node_modules
+- public folder
+- src folder
+- .gitignore
+- package-lock.json
+- package.json
+- README.md
+
+# Public foilder
+
+- all the static content in our file and we never change on that files
+- logo and favicon and images and videos
+- make assest folder and you can put img and video
+- what is the manifest.json and robots.txt
+- the file u made host but whenevr the you dont want to public and dont want to show that link store in robots.txt
+- manifest.json => meta data file of the react
+
+# src folder
+
+- most of time we work on src folder and its very imp and mind of our website
+
+# what is package.json ? why you use it ?
+- the dependecies of the node-modules are in the package.json file
+- we use it because we have many react packages and his version that all stored in package.json
+- there is one script files like this
+
+```
+ "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  ```
+
+  - so its give info how to start and how to build file make for the deployment all things it provide us
+  - which browser casn run smootthly all thing its describe  in this file
+
+- always Remember anything you write in js file wether that js file have react code or javascript code you have to mention that js file  
+- in HTML file.keep intact with basic always.there is reason we will discuss about that so Remember
+
+# where is our js file script tag in creat-react-app with npx
+
+- so its enabled by the package.json behind the scene if u open source in browser ,you can see react-script enabled by bundler
+like this
+
+```
+from source  browser
+
+<script defer src="/static/js/bundle.js"></script>
+
+from package.json file
+
+"react-scripts": "5.0.1",
+
+```
+- starting our development by understanding how all things work which file importance for dong this and that
+
+```
+import React from "react";
+import ReactDOM from "react-dom";
+ReactDOM.render(<h1>Hello</h1>,document.getElementById("root"))
+
+```
+- to render anything we need react-dom dependecy
+- to enter jsx  file(element of html) we need react dependecy
+- ReactDOM.render("what to write","where to write")
+
+# what is babel
+
+- babel stored in node_modules
+- its use for to convert jsx file into js code
+- because browser dont know the what is es6,new moden js so for that we use babel
+- work as translate .its a compiler
+
+# lets how babble conver react code into jsx file
+
+- life cycle
+
+```
+jsx => React.createElement => reactElement is js object => html element
+
+```
+
+```
+React Code
+
+ReactDOM.render(<h1>Hello</h1>,document.getElementById("root"))
+
+```
+
+```
+jsx Code
+
+ReactDOM.render( /*#__PURE__*/_jsx("h1", {
+  children: "Hello"
+}), document.getElementById("root"));
+
+```
+# what is jsx
+
+- jsx convert html tags into react element
+- html tags we can write on react with jsx help
+- we need because browser only need or understand html,css,js
+
+- NOTE:TIMESTAMP EP4:24MIN
+
