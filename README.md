@@ -357,3 +357,115 @@ ReactDOM.render( /*#__PURE__*/_jsx("h1", {
 
 - NOTE:TIMESTAMP EP4:24MIN
 
+# why we need component ?
+
+- if i had to write many thing indexh.js file
+
+```
+ReactDOM.render(<h1>Hello</h1>,document.getElementById("root"))
+
+if i want to make many thing here accept "hello" and many things so i can do like this
+
+ReactDOM.render(
+    <>
+    <p>hello para </p>
+    <h1>Hello</h1>
+    </>
+,document.getElementById("root"))
+
+```
+- but that is very complex way .insted make seprate component file and that file will be import here.that's How we need of component.
+
+# What is Component ?
+
+- component is a one kind code of structure which we can use many time for create same structure. its reusability is main function 
+
+- try to naming of component in camelcase | Ex: Header.js | Ex: NavBar.js
+
+- componenets name like this 
+
+- App.js
+- Header.js
+- Footer.js
+- Section.js
+
+- there are 2 types of components 
+- 1.function based Components
+- 2.class based Components
+
+# what is function based componenents?
+
+- its work simple like javascript function 
+- its return jsx
+
+# How to write function component and how to use in our index.js file 
+
+- 3 things to remember
+
+- 1.always import React 
+```
+import React from "react";
+```
+
+- 2.Always Export Components files
+
+```
+export default App;
+```
+
+- 3.Always import Components into Your Main file
+```
+import App from "./App";
+```
+
+- Now See How Code File Looks Like
+
+```
+// index.js
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App"
+
+
+ReactDOM.render(
+    <>
+        <App></App>
+    </>,
+    document.getElementById("root"));
+
+```
+
+```
+ // App.js => Component File
+
+import React from "react";
+
+//Function component
+
+function App() {
+    return <h1>Hello From App Component</h1>
+}
+
+export default App;
+
+```
+
+- You can write components like this too in main file 
+
+```
+<> 
+    <App/>
+</>
+
+OR 
+
+<> 
+    <App></App> 
+</>
+
+
+```
+
+- we can write <app/> component as many time as You use .
+
