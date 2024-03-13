@@ -469,3 +469,73 @@ OR
 
 - we can write <app/> component as many time as You use .
 
+so now discuss in component file
+
+```
+function App() {
+    return (
+        <div>
+            <h1>Hello From App Component</h1>
+            <p>dipesh</p>
+        </div>
+        )     
+}
+
+```
+- here after return keyword always write "( write whole code in this )" 
+
+- also for more then one child always give parent element its <div></div> OR <React.fragment> </React.fragment> OR <> </>
+
+- this is same rule apply on main js file which is here index.js
+
+# Now let's Talk About import and export file
+
+- lets take a website is out Home 
+
+- to make home there is dependecy is land here that dependecy is our react and reactdom 
+
+- to make home we need many components so we also take one component import and export to our land means our main  page
+
+# there is some JSX Rule
+
+- 1. always child component have parent component <div></div>
+
+- 2. always have js varible show in function or express you have to write in  {var} or {5+5}
+
+- 3. write always className insted of class
+
+- 4. You can't use if...else insted you have to used ternary operator => is this ? yes:no
+
+# make our main componennt function as arrow function too
+
+ - SHORTCUT ==> rafce
+
+ - Normal Function
+
+ ```
+ function App(){
+    return(
+        <div className="app">
+            <h1></h1>
+            <div></div>
+            <p></p>
+        </div>
+    )
+ }
+
+ ```
+ - Arrow Function 
+
+ ```
+ const App = () => {
+    return (
+        <div className="app">
+             <h1>Hello From App Component</h1>
+             <p>dipesh</p>
+             <h2>{name}</h2>
+             <p>{5+5}</p>
+        </div>
+    )
+}
+
+ ```
