@@ -3,13 +3,6 @@ import React from "react"
 import "./Header.css"
 import pumalogo from "../Assests/puma-logo-cover.png";
 
-
-// const bg = {
-//     backgroundColor: "red"
-// }
-//          <div style={bg}>
-
-
 const Header = () => {
     return (
         <div className="Header">
