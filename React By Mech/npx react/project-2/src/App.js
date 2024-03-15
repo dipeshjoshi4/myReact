@@ -1,16 +1,20 @@
 import React from "react";
 import "./App.css"
+import Header from "./Components/Header"
+import Hero from "./Components/Hero"
+import Footer from "./Components/Footer"
 
-//Function component
 
 
 
-function App() {
+const App = () => {
     return (
-       <div className="app">
-           <h1>Hello From App Component</h1>
-       </div>
-        )     
+        <div className="app">
+            <Header/>
+            {/* <Hero />
+            <Footer/> */}
+        </div>
+    )
 }
 
 export default App;

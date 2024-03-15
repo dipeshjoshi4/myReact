@@ -539,3 +539,63 @@ function App() {
 }
 
  ```
+
+ # 5
+
+ Make A simple project using all the Learning till now so we make puma website 3 section
+
+ - 1. Header Section
+
+ - 2. Hero Section
+
+ - 3. Footer Section
+
+ - folder structure
+
+ For The Componenet which is Header,footer,hero for the make component folder in src and make it 3 css and js file and import and export in app.js file and individual css file import to indvidual js file
+
+ - Ex
+
+ - index.js file have our app and so import APP and for dependecy we have import react and reactdom package
+
+```
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+```
+- now app.js file which is in index.js have this dependecy and package manager
+
+```
+import React from "react";
+import "./App.css"
+import Header from "./Components/Header"
+import Hero from "./Components/Hero"
+import Footer from "./Components/Footer"
+
+```
+
+- and now header/hero/footer componennets code
+
+```
+import React from "react"
+import "./Header.css"
+import pumalogo from "../Assests/puma-logo-cover.png";
+
+```
+
+- we can also writw css file for the header/hero/footer(External CSS)
+
+- inline CSS
+```
+<img src={pumalogo} alt="PumaLogo" style={{ width: "70px" }}/>
+```
+
+- in page CSS
+
+```
+ const bg = {
+     backgroundColor: "red"
+ }
+ <div style={bg}>
+ 
+```
