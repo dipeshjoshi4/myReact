@@ -833,10 +833,11 @@ const Hero = ({title,price,img}) => {
 
 export default Hero;
 
+
+```
 - App.js code file(parent)
 
 ```
-
 import React from "react";
 import "../src/App.css"
 import Header from "./Components/Header"
