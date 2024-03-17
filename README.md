@@ -599,3 +599,138 @@ import pumalogo from "../Assests/puma-logo-cover.png";
  <div style={bg}>
  
 ```
+
+# 6
+
+# Props
+
+- props(properties) are a way to pass data from a parent  component to a child component
+
+- props are used to transfer data from one component to another
+
+- props are just like function in js
+
+- props are read-only and can not be modified by the child component
+
+- you can pass any js datatypes (String,Number Array,Object,etc) as props
+
+- if you see you can say that props is nothing but object
+
+- props are object which can use inside a component
+
+- props are passed to components as object.when you pass data from a 
+parent component to a child component,you are essentially passing an object
+(the props object) that contains key-value pairs.each key represents a prop name 
+and the corresponding value is the data you want to pass.
+
+- WE CAN USE PROPS LIKE THIS
+
+- APP.JS
+
+```
+
+const App = () => {
+    return (
+      <div className="app">
+           <Child name="rahul" name2="dipesh"/>
+      </div>
+    )
+}
+
+```
+- CHILD.JS
+
+```
+const child = (props) => {
+    return (
+        <div>
+            <h1>Hello {props.name}</h1>
+            <h1>Hello {props.name2}</h1>
+        </div>
+    )
+}
+
+```
+
+- YOU CANT CHANGE THE NAME IN CHILD COMPONENT WHILE USING PROPS
+
+```
+const child = (props) => {
+    props.name = "rahul";
+    return (
+        <div>
+            <h1>Hello {props.name}</h1>
+            <h1>Hello {props.name2}</h1>
+        </div>
+    )
+}
+
+// -> you can change prop name in child component
+// -> Cannot assign to read only property 'name' of object '#<Object>'
+
+```
+
+-you can write props name like this...
+```
+const App = () => {
+
+    const name = "rahul"
+
+    return (
+      <div className="app">
+           <Child xyz={name} name2="dipesh"/>
+      </div>
+    )
+}
+```
+- fo that child compo. code is like this
+
+```
+const child = (props) => {
+    return (
+        <div>
+            <h1>Hello {props.xyz}</h1>
+            <h1>Hello {props.name2}</h1>
+        </div>
+    )
+}
+
+```
+
+# how let's see we use props|you can pass any js datatypes (String,Number Array,Object,etc) as props
+
+
+- App.js Code
+
+```
+const App = () => {
+    const name = "rahul"
+    const arr = ["vikki", "manku"]
+    const obj = {a: "sonal",b:"monal"}
+    const boo = "true"
+    const int = 5
+    return (
+      <div className="app">
+            <Child name={name} name2={arr} name3={obj} name4 = {boo} name5 = {int} />
+      </div>
+    )
+}
+
+```
+
+- Child.js Code
+
+```
+const child = (props) => {
+    return (
+        <div>
+            <h1>Hello {props.name}</h1>
+            <h1>Hello {props.name2[0]}</h1> 
+            <h1>Hello {props.name3.a}</h1> 
+            <h1>Hello {props.name4}</h1> 
+            <h1>Hello {props.name5}</h1> 
+        </div>
+    )
+}
+
+```
