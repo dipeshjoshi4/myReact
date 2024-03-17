@@ -718,7 +718,7 @@ const App = () => {
 
 ```
 
-- Child.js Code
+- Child.js Code 
 
 ```
 const child = (props) => {
@@ -732,5 +732,140 @@ const child = (props) => {
         </div>
     )
 }
+
+```
+
+# destructure props | 2 ways you can do like this 
+
+- take this code as ideal
+
+```
+- App.js Code
+
+
+const App = () => {
+    const name = "rahul"
+    const arr = ["vikki", "manku"]
+    const obj = {a: "sonal",b:"monal"}
+    const boo = "true"
+    const int = 5
+    return (
+      <div className="app">
+            <Child name={name} name2={arr} name3={obj} name4 = {boo} name5 = {int} />
+      </div>
+    )
+}
+
+
+
+- Child.js Code 
+
+
+const child = (props) => {
+    return (
+        <div>
+            <h1>Hello {props.name}</h1>
+            <h1>Hello {props.name2[0]}</h1> 
+            <h1>Hello {props.name3.a}</h1> 
+            <h1>Hello {props.name4}</h1> 
+            <h1>Hello {props.name5}</h1> 
+        </div>
+    )
+}
+
+```
+
+# 1 - chnage props in parameter to replace with you child elements key
+```
+const child = ({name,name2,name3,name4,name5}) => {
+    return (
+        <div>
+            <h1>Hello {name}</h1>
+            <h1>Hello {name2[0]}</h1> 
+            <h1>Hello {name3.a}</h1> 
+            <h1>Hello {name4}</h1> 
+            <h1>Hello {name5}</h1> 
+        </div>
+    )
+}
+```
+# 2 - chnage in the function of app and key = props
+
+```
+const child = (props) => {
+    const {name,name2,name3,name4,name5} = props
+    return (
+        <div>
+            <h1>Hello {name}</h1>
+            <h1>Hello {name2[0]}</h1> 
+            <h1>Hello {name3.b}</h1> 
+            <h1>Hello {name4}</h1> 
+            <h1>Hello {name5}</h1> 
+        </div>
+```
+
+# 7
+
+- in puma project we use props let see one level optimize on this project
+
+- hero.js code file(child)
+
+```
+import React from "react";
+import "./Hero.css";
+
+
+const Hero = ({title,price,img}) => {
+    return (
+ <div className="hero">       
+            <div className="one">      
+                <div className="shoesPic">
+                    <img src={img} alt="shoes" style={{ width: "350px" }}/>
+                </div>   
+                 <div className="shoesDetails">
+                    <p>{title}</p>
+                    <p>{price}</p>
+                </div> 
+            </div>
+ </div>
+    )
+}
+
+export default Hero;
+
+- App.js code file(parent)
+
+```
+
+import React from "react";
+import "../src/App.css"
+import Header from "./Components/Header"
+import Hero from "./Components/Hero"
+import Footer from "./Components/Footer"
+import shoes from "./Assests/shoes.avif"
+import shoes1 from "./Assests/Shoes1.avif"
+import shoes2 from "./Assests/Shoes2.avif"
+import shoes3 from "./Assests/Shoes3.avif"
+
+
+const App = () => {
+    return (
+      <div>
+        <Header />
+              <div>
+                <h2>Recommand For You</h2>
+              </div>
+        <div  style={{  display: "flex" ,justifyContent: "space-between", padding: "30px"   }}>
+            <Hero title="Unisex Sneakers" price="2000" img={shoes} />
+            <Hero title="MEN Sneakers" price="4000"  img={shoes1} />
+            <Hero title="WOMEN Sneakers" price="5000" img={shoes2}/>
+            <Hero title="CHILDREAN Sneakers" price="6000" img={shoes3}/>
+        </div>
+        <Footer /> 
+      </div>
+    )
+}
+
+export default App;
 
 ```
