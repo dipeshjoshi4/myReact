@@ -870,3 +870,96 @@ const App = () => {
 export default App;
 
 ```
+
+# 8
+
+- the correct way of writing props in the Parent means here our "App.js" is after the function  and then get and to put into to the child according to the their element
+
+- so for the different card price,img and title we have created data of array (array of object)
+
+- so write all title ,price and img and then get that data and put at ur element just like this
+
+```
+
+const App = () => {
+
+  const data = [
+    { title: "Unisex Sneakers", price: 2000, img: shoes },
+    { title: "MEN Sneakers", price: 4000, img: shoes1 },
+    { title: "WOMEN Sneakers", price: 5000, img: shoes2 },
+    { title: "CHILDREAN Sneakers", price: 6000, img: shoes3 }
+  ]
+
+  return (
+    <div>
+      <Header />
+      <div>
+        <h2>Recommand For You</h2>
+      </div>
+      <div style={{ display: "flex", justifyContent: "space-between", padding: "30px" }}>
+        <Hero title={data[0].title} price={data[0].price} img={data[0].img} />
+        <Hero title={data[1].title} price={data[1].price} img={data[1].img} />
+        <Hero title={data[2].title} price={data[2].price} img={data[2].img} />
+        <Hero title={data[3].title} price={data[3].price} img={data[3].img} />
+      </div>
+      <Footer />
+    </div>
+  )
+}
+
+export default App;
+
+```
+
+also we can write this data with the help of map too
+
+# 9
+
+let do with the map method to very easy way of this 
+
+## what is map mathod
+
+- map method is  used for creating a new array from exisiting one
+
+```
+const num = [2,3,5,6];
+
+const newNum = num.map((element,index)=>{
+    return(
+        console.log(element*2,index) // given a array individual count * 2 and index
+    )
+})
+
+
+```
+- same as the above num array is equals to our data array
+
+- num === data so just like num.map() we use data.map()
+
+- whenever any method we run in main div of parent always there will be {} curly bracket
+
+- first witout map method we derived data like this
+
+```
+      <div style={{ display: "flex", justifyContent: "space-between", padding: "30px" }}>
+        <Hero title={data[0].title} price={data[0].price} img={data[0].img} />
+        <Hero title={data[1].title} price={data[1].price} img={data[1].img} />
+        <Hero title={data[2].title} price={data[2].price} img={data[2].img} />
+        <Hero title={data[3].title} price={data[3].price} img={data[3].img} /> 
+      </div>
+
+```
+
+- after using map method our data drived with like that
+
+```
+ <div style={{ display: "flex", justifyContent: "space-between", padding: "30px" }}>
+        {
+          data.map((el) => {
+            return (
+              <Hero title={el.title} price={el.price} img={el.img} />
+            )
+          })
+        }
+</div>
+```
