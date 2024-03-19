@@ -775,7 +775,7 @@ const child = (props) => {
 
 ```
 
-# 1 - chnage props in parameter to replace with you child elements key
+## 1 - chnage props in parameter to replace with you child elements key
 ```
 const child = ({name,name2,name3,name4,name5}) => {
     return (
@@ -789,7 +789,7 @@ const child = ({name,name2,name3,name4,name5}) => {
     )
 }
 ```
-# 2 - chnage in the function of app and key = props
+## 2 - chnage in the function of app and key = props
 
 ```
 const child = (props) => {
