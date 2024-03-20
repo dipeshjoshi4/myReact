@@ -1,0 +1,39 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   overflow-x: hidden;
+}
+
+
+
+.product-list{
+    height: 100vh;
+    width: 100vw;
+}
+
+.shoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    width: 20rem;
+    margin: 2rem 0rem 2rem 2rem;
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+.Trigger{
+    width: 300px;
+    height: 280px;
+}
+
+.descreption{
+    width: 50%;
+}
+
+.shoes-Price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
