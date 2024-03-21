@@ -3,7 +3,7 @@
 
 | No. | Questions                                                                                                                                                     |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | [Why React and simple introduction](#what-is-react?-and-why-we-need ?)                                     |
+| 1   | [what is react? and why we need ?](###whatisreact?andwhyweneed?)                                |
 | 2   | [What is a prototype chain](#what-is-a-prototype-chain)                                                                                                       |
 | 3   | [What is the difference between Call, Apply and Bind](#what-is-the-difference-between-call-apply-and-bind)                                                    |
 | 4   | [What is JSON and its common operations](#what-is-json-and-its-common-operations)                                                                             |
