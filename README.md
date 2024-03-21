@@ -1,3 +1,22 @@
+
+### Table of Contents
+
+| No. | Questions                                                                                                                                                     |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | [Why React and simple introduction](#what-is-react?-and-why-we-need ?)                                     |
+| 2   | [What is a prototype chain](#what-is-a-prototype-chain)                                                                                                       |
+| 3   | [What is the difference between Call, Apply and Bind](#what-is-the-difference-between-call-apply-and-bind)                                                    |
+| 4   | [What is JSON and its common operations](#what-is-json-and-its-common-operations)                                                                             |
+| 5   | [What is the purpose of the array slice method](#what-is-the-purpose-of-the-array-slice-method)                                                               |
+| 6   | [What is the purpose of the array splice method](#what-is-the-purpose-of-the-array-splice-method)                                                             |
+| 7   | [What is the difference between slice and splice](#what-is-the-difference-between-slice-and-splice)                                                           |
+| 8   | [How do you compare an Object with a Map](#how-do-you-compare-object-and-map)                                                                                 |
+| 9   | [What is the difference between == and === operators](#what-is-the-difference-between--and--operators)                                                        |
+| 10  | [What are lambda expression or arrow functions](#what-are-lambda-or-arrow-functions)                                                                                     |
+| 11  | [What is a first class function](#what-is-a-first-class-function)              
+
+
+
 # what is react? and why we need ?
 react is an open-source library for building a user interface(UI)
 
