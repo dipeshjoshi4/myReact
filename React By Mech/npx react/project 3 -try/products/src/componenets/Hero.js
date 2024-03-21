@@ -1,19 +1,19 @@
 
 import React from 'react';
 import "./Hero.css"
-import Trigger from "../Assests/Trigger.avif"
+// import Trigger from "../Assests/Trigger.avif"
 
-const Hero = () => {
+const Hero = ({ heading, img, descreption, price }) => {
     return (
         <div className='Hero'>
 
             <div className='Product-list'>
                 <div className="shoes">
-                    <h2>Trigger Shoes</h2>
-                    <img src={Trigger} alt="Trigger" className="Trigger" />
+                    <h2>{heading}</h2>
+                    <img src={img} alt="Trigger" className="Trigger" />
                     <div className='shoes-Price'>
-                        <div className='descreption'>Trigger Shoes For Men</div>
-                        <div> $399 </div>
+                        <div className='descreption'>{descreption}</div>
+                        <div> {price} </div>
                     </div>
                 </div>
             </div>
