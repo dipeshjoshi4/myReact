@@ -206,14 +206,14 @@ package.json
 we remove that script CDN link and instal dependecy with npm fot hat we use comman like this
 "npm install react"
 
-2 things come up
+- 2 things come up
 - node_modules
 - package-lock.json
 
-for install react dom command
-"npm i react-dom"
+- for install react dom command
+- "npm i react-dom"
 
-1 thing show up
+- 1 thing show up
 - react-dom node modules
 - and every dependecy have their own package.json
 
@@ -1051,6 +1051,191 @@ const data = [
       </div>
     </div>
   )
+}
+
+
+```
+- THERE IS ONE TOPIC OF PROPS DRILLING WE TALK ABOUT LATTER.
+
+# 10 Hooks 
+
+- Hooks and props are the 2 main thing in react. this most used in react
+
+- hooks is normal js function.which is provided by react to handle state management.
+
+- class componenet have life cycle to maintain state.but in function componenet there are not so for that we have
+  hooks for the function component
+
+## what is state?
+
+- The state is a built-in React object that is used to contain data or information about the component.
+-  A component's state can change over time; whenever it changes, the component re-renders.
+- IN React there are many states but the main Two is
+
+- 1. useState
+- 2. useEffect(80%)
+- 3. useRef
+- 4. useMemo
+
+- in react we can't chnage the variable directly in UI that's why use Hooks
+
+```
+const Hooks = () => {
+    let x = 5;
+    function handleNumber() {
+        x = x + 1;
+        console.log("click me", x)
+    }
+    return (
+        <div>
+            <h1>Mech Code</h1>
+            <p>Number {x}</p>
+            <button onClick={handleNumber}>ADD</button>
+        </div>
+    )
+}
+
+```
+
+- HOOKS SOME RULE
+
+1. hooks is top level of function componenet
+
+2. hooks also be import but where is the export of hooks so that store in node modules
+
+3. do not call inside loops,conditional statements, nested function
+
+4. must be written inside function componenet
+
+# States
+
+- IN sIMPLE WORDS : 
+- ITS USE FOR THE DIFFEREENT ATTRIBUTES 
+- BY THE CHANGE OF ATTRIBUTES WE HAVE SHOWN DATA AND ANIMATION AND THAT FOR THE CHNAGING DIFFERENT ATTRIBUTES NEED
+- FOR THAT WE USE DIFFERENT STATES FOR THE CHANGE IN ATTRIBUTES
+
+- so as above we can see in console that all thing work great but UI does not chnage
+- state is js object  that holds some information of component that may be chnage over time
+- whenever the state of an object chnages,React re-render the component
+- props are immutable. 
+- i.e. : once set the props can not be chnaged.while state is an observable object that is used to be hold data
+  that may chnage chnage overtime
+
+# useStates
+
+- it returns =>  1.current Value || 2. function()
+
+- for chnages in value we use function
+
+- there is always intial value which is written in useState()
+
+- we store useState() in a variable
+
+- this how i import the state
+
+```
+import React from "react";
+import { useState, React } from "react";
+
+```
+
+### this is how intial and behind the scene our hooks and state are
+
+```
+
+import { useState, React } from "react";
+
+const Hooks = () => {
+
+    const counterStateVaribale = useState(5)
+    // counterStateVaribale[0] = counter;
+    // counterStateVaribale[1] = setCounter
+    function handleNumber() {
+        counterStateVaribale[1](counterStateVaribale[0] + 1)
+    }
+
+    return (
+        <div>
+            <h1>Mech Code</h1>
+            <p>Number {counterStateVaribale[0]}</p>
+            <button onClick={handleNumber}>ADD</button>
+        </div>
+    )
+}
+
+```
+
+### then actual we use "useState" and "Hooks" in code like this
+
+```
+import { useState, React } from "react";
+
+const Hooks = () => {
+
+    const [counter, setCounter] = useState(5)
+    function handleNumber() {
+        setCounter(counter + 1)
+    }
+
+    return (
+        <div>
+            <h1>Mech Code</h1>
+            <p>Number {counter}</p>
+            <button onClick={handleNumber}>ADD</button>
+        </div>
+    )
+    
+}
+export default Hooks
+
+```
+
+## now lets make a program which have functionality of like this
+
+1. add Number with on button click
+2. chnage name with on button click
+3. minus the number till 0 and then back to the intial number which is 5
+
+```
+import { useState, React } from "react";
+import "./Hooks.css";
+
+const Hooks = () => {
+
+    const [counter, setCounter] = useState(5)
+
+    const [name, setName] = useState("Mech Code")
+
+    function handleAdd() {
+        setCounter(counter + 1)
+    }
+
+    function handleMinus() {
+        setCounter(counter - 1)
+        if (counter - 1 == -1) {
+            setCounter(5)
+        }
+    }
+
+    function handleChnage() {
+        setName("webdevdj")
+        if (name === "webdevdj") {
+            setName("Mech Code")
+        }
+    }
+    
+    return (
+        <div className="Hooks">
+            <h1>{name}</h1>
+            <p>Number {counter}</p>
+            <div className="btns">
+                <button onClick={handleAdd}>ADD</button>
+                <button onClick={handleMinus}>Minus</button>
+                <button onClick={handleChnage}>NameChnage</button>
+            </div>
+        </div>
+    )
+
 }
 
 
