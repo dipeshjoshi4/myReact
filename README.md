@@ -1057,7 +1057,9 @@ const data = [
 ```
 - THERE IS ONE TOPIC OF PROPS DRILLING WE TALK ABOUT LATTER.
 
-# 10 Hooks 
+# 10 
+
+# Hooks 
 
 - Hooks and props are the 2 main thing in react. this most used in react
 
@@ -1190,6 +1192,7 @@ export default Hooks
 
 ```
 
+# 10th project/program
 ## now lets make a program which have functionality of like this
 
 1. add Number with on button click
@@ -1240,3 +1243,6 @@ const Hooks = () => {
 
 
 ```
+
+# 11
+# 11th project/program(Temprature color chnage)
