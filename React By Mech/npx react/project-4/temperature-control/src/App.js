@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Temp from './Temp';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
+    <div className="app">
+      <Temp />
     </div>
   );
 }
