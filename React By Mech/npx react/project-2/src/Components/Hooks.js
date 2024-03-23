@@ -12,6 +12,15 @@ const Hooks = () => {
         setCounter(counter + 1)
     }
 
+    // setTemp((prevTemp) => {
+    //     const newTemp = prevTemp + 1;
+    //     if (newTemp >= 19) {
+    //         setColor("red")
+    //         setWord("HOT")
+    //     }
+    //     return newTemp;
+    // });
+
     function handleMinus() {
         setCounter(counter - 1)
         if (counter - 1 == -1) {

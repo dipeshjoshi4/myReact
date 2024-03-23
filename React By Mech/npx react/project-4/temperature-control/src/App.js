@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import React from 'react'
 import './App.css';
 import Temp from './Temp';
 
@@ -11,3 +12,5 @@ function App() {
 }
 
 export default App;
+
+
