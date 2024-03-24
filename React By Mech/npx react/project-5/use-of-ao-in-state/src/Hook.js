@@ -9,13 +9,19 @@ const Hook = () => {
 
     const [data, setData] = useState({ name: 'dipesh', age: 23 })
 
+    const [attribute, setAttribute] = useState(false)
+
+
     function handleAdd() {
         setNumber([...Number, 1, 3, 7])
     }
 
     function addChnage() {
         setData({ ...data, name: "param", age: 26 })
+    }
 
+    function Bool() {
+        setAttribute(!attribute);
     }
 
     return (
@@ -31,6 +37,12 @@ const Hook = () => {
             <div>
                 <p>my name is {data.name} and my age is {data.age} </p>
                 <button onClick={addChnage}>Add</button>
+            </div>
+
+            {/* true or false */}
+            <div>
+                <p>{attribute ? "dipesh" : "pppp"} </p>
+                <button onClick={Bool}>Add</button>
             </div>
 
         </div>
