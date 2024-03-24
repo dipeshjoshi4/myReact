@@ -1253,3 +1253,96 @@ const Hooks = () => {
 - there is also Temp.css Folder check it out 
 
 # 12th UseState with Array and object
+
+- for that you have to learn one Spread Object in array & object
+
+```
+let arr1 = [1,2,3,4,5];
+
+//add 23,25,6
+
+let arr2 = [...arr1,23,25,6]
+
+=> arr2 = 1,2,3,4,5,23,25,6
+
+```
+
+```
+let obj = {
+  name:"dipesh",
+  age:23,
+  phine:982564646
+}
+
+let obj2 = {...obj,age:33,name:"sunita"}
+
+=> obj2 = name:sunita,age:33,phine:982564646
+
+```
+
+- for the use of Hook when the data or currvalue is array
+
+```
+const Hook = () => {
+    const [Number, setNumber] = useState([2, 5, 6, 4]); //1,3,7
+
+
+    function handleAdd() {
+        setNumber([...Number, 1, 3, 7])
+    }
+
+    return (
+        <div>
+            <p>Number {Number}</p>
+            <button onClick={handleAdd}>Add</button>
+        </div>
+    )
+}
+
+```
+
+- so when click happen in Add button handleAdd functipon call and old array + new number add 
+
+- here if you see then with spread operator which is an array [] spread the array from currvalue and join with 1,3,7
+
+- with the help of setNumber Function
+
+- here we can add array like this too 
+
+```
+const Hook = () => {
+    const [Number, setNumber] = useState([2, 5, 6, 4]);
+
+        //OR
+
+const Hook = () => {
+  const num = [2,5,6,4]
+    const [Number, setNumber] = useState(num);
+
+```
+
+
+- with object type of data we use hook like this
+
+```
+
+const Hook = () => {
+
+    const [data, setData] = useState({ name: 'dipesh', age: 23 })
+    function addChnage() {
+        setData({ ...data, name: "param", age: 26 })
+    }
+
+    return (
+            <div>
+                <p>my name is {data.name} and my age is {data.age} </p>
+                <button onClick={addChnage}>Add</button>
+            </div>
+    )
+
+}
+
+```
+
+- now you get how the things is working  how import the #Spread Operator is imp.
+
