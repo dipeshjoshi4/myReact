@@ -4,11 +4,8 @@
 //spread operator
 //template literals
 //ternaries
-
 //promises
-
 //async/await
-
 //map,filter,reduce,sort
 
 const data = [
@@ -148,44 +145,16 @@ const data = [
   },
 ];
 
-// function getBooks() {
-//   return data;
-// }
+function getBooks() {
+  return data;
+}
 
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
 
-//---------------------------------------------------------------------------------------
-//------------Destructuring Objects and Arrays
-//-from object or array to get out of array and object
 
-//////////////////////////////////////////////////////////////
-//Destructing on Object
 
-//Simple way
-// const book = getBook(2);
-// const title = book.title;
-// const author = book.author;
-// console.log(title, author);
 
-//Object Destructing way
-// const book = getBook(2);
-// const { title, author, pages, genres } = book;
-// console.log(title, author, pages, genres);
 
-//////////////////////////////////////////////////////////////
-//Destructing on Array
 
-//simplay way
-// const book = getBook(2);
-// const {genres } = book;
-// const primary = genres[0];
-// const secondary = genres[1];
-// console.log(primary, secondary);
-
-//Destructring way
-const book = getBook(2);
-const { genres } = book;
-const [primary, secondary] = genres;
-console.log(primary, secondary);
