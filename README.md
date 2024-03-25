@@ -1439,3 +1439,105 @@ const Hook = () => {
 
 # Product list Project, Filter 
 
+- get the array of object dummy data from google from website like
+
+- url link : "https://dummyjson.com/carts" (dummy array of object)
+
+- then use on "map method" and made a structure who gives this plenty of card item 
+
+- we have waring comes that whenever you use map method you have to given one unique why lets understand this
+
+- for the identify all the item uniquley with key
+
+- for the cart element have id  and id always have unique .if product has no id then gives index otherwise its always a id.
+
+- now for the buitl of filteration we have to know filter method in js for that
+
+## filter
+
+```
+
+const num = [2,3,4,7,8,5,6,9]
+
+const numberfilter = num.filter((number)=>{
+        return(
+            number<4
+        )
+})
+
+console.log(numberfilter) //[5,6,7,8,9]
+
+```
+
+- 1. to here make filter option we target price and for the show any filteration UI.
+
+- 2. WE HAVE TO CHNAGE UI AND FOR THAT any UI updation or deletion we have useState()
+
+- 3. as per usestate have mention after array of object and also usestate currvalue is data
+
+- 4.  data means array of object  now whatever chnages happen so we have to map data with currvalue 
+      so chnage like this
+
+      ```
+         data.map((product) => {
+
+            to
+
+         ProductItem.map((product) => {
+
+      ```
+
+- 5. we send data array of object in different file and then export and import in product.js file
+
+```
+
+import { React, useState } from 'react'
+import "./product.css"
+import Data from "./Data/Data.js";
+
+const Products = () => {
+
+    const [productItem, setProductItem] = useState(Data)
+
+    const handleFilter = () => {
+        const filterItem = productItem.filter((item) => {
+            return (
+                item.price > 100
+            )
+        })
+        setProductItem(filterItem)
+    }
+
+
+    return (
+        <div>
+            <p className='filter' onClick={handleFilter}>Filter by Price</p>
+
+            <div className='cart'>
+                {
+                    productItem.map((product) => {
+                        return (
+
+                            <div className='product' key={product.id}>
+                                <div className='product-image'>
+                                    <img src={product.thumbnail} alt="" />
+                                </div>
+
+                                <div className="product-details">
+                                    <p className="product-title">{product.title}</p>
+                                    <p className="product-price">₹{product.price}</p>
+                                </div>
+                                <button>Add</button>
+                            </div>
+
+                        )
+                    })
+                }
+            </div>
+        </div>
+    )
+}
+
+export default Products
+
+```
