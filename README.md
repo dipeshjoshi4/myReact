@@ -1591,6 +1591,10 @@ show the updation by users
 
 - once it determines the difference(knowing as a "diffing" process) finally only those specific chnage are applied to the realDom
 
-# what is Reconcilliation?
+## what is Reconcilliation?
 
 - process of comnparing current virtualDom with the previous one.and identify the difference and updating the Real Dom is called Reconcilliation
+
+# 15 | UseEffect | React
+
+- 
