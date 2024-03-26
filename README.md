@@ -1585,7 +1585,7 @@ show the updation by users
 
 ## what is virtual Dom?
 
-- its a copyor you can say its carbon copy of real or actual DOM.when you make any chnages to a component or the state of react application,react create a new virtual DOM.
+- its a copy or you can say its carbon copy of real or actual DOM.when you make any chnages to a component or the state of react application,react create a new virtual DOM.
 
 - then it compares this updated virtual dom with previous one to identify the specific chnage that occured.
 
@@ -1593,4 +1593,4 @@ show the updation by users
 
 # what is Reconcilliation?
 
-- process of comnparingcurrent virtualDom with the previous one.identifythe difference and updating the Real Dom is called Reconcilliation
+- process of comnparing current virtualDom with the previous one.and identify the difference and updating the Real Dom is called Reconcilliation
