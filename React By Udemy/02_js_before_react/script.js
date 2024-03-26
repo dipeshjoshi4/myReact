@@ -154,6 +154,14 @@ function getBook(id) {
 }
 
 
+//Destructuring 
+
+//is a very helpfull when we need of data outof array or object
+
+
+const book = getBook(2);
+const title = book.title;
+title;
 
 
 

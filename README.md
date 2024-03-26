@@ -1541,3 +1541,56 @@ const Products = () => {
 export default Products
 
 ```
+
+# 14 | Virtual Dom, Reconciliation 
+
+- whenever the html element render browser render a  a tree like structure
+
+- dom is tree like structure which will be help for the adding,selecting or creating new content 
+
+- with DOM we can select and make behviorial changes
+
+### React DOM
+
+- in react there is 2 things is like react and reactDOM
+
+- 1. React :
+
+- react is all about componment,state,props,context api
+
+- if u have to deal with this much things then ur dependecy with the react 
+
+- comopnent make ,props make ,play with context api
+
+- 2. React DOM
+
+- the chnage in Ui with the correct data by clicking some button or some event happen with UI
+
+- thats the work done by react DOM-> screen chnages
+
+- in application (react native do this thing)
+
+- How the Ui chnages thats happen let see behind the scene
+
+- Real Dom -----CARBON COPY-----> Virtualdom ---------Update-------->Virtual Dom Updation(curent dom)
+
+- so what the real dom have and thats same copy make by virtual Dom 
+
+- after the updation active virtual dom updation copy make which is called current dom and send back to real dom to 
+show the updation by users
+
+- here the technique between virtual dom and current  chnages find is called the Reconciliation 
+
+- the difference is called diffing process
+
+## what is virtual Dom?
+
+- its a copyor you can say its carbon copy of real or actual DOM.when you make any chnages to a component or the state of react application,react create a new virtual DOM.
+
+- then it compares this updated virtual dom with previous one to identify the specific chnage that occured.
+
+- once it determines the difference(knowing as a "diffing" process) finally only those specific chnage are applied to the realDom
+
+# what is Reconcilliation?
+
+- process of comnparingcurrent virtualDom with the previous one.identifythe difference and updating the Real Dom is called Reconcilliation
