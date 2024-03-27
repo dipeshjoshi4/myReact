@@ -1597,4 +1597,59 @@ show the updation by users
 
 # 15 | UseEffect | React
 
-- 
+- Hooks allwos you to perform side effect in your function componenent.side effect like are fetching data.API Fetch,timer function(setTimeOut,setInterval),local 
+storgae
+
+- useEffect
+- we also import this in above import files
+
+- syntax
+- there is callback function in the useEffect()
+- the 2 parameter  callback function and depedency
+
+```
+
+ useEffect(()=>{
+        console.log("tempratural statement" + temp)
+})
+
+```
+
+- its run on the 2 activity
+
+- 1. firstly when copmonenet render - refresh
+
+- 2. secondly when copmonenet update - button click
+
+- now let see what is dependecy,here its called array
+
+- if you want to active only one time then put blank dependecy at the end of callback function
+
+```
+ useEffect(()=>{
+        console.log("tempratural statement" + temp)
+},[])
+
+```
+
+- you can chnage with some data with whom you run with it.
+
+- means you can run the console.log when first render then second time when some data chnages happen 
+
+- ex:when temp change
+
+```
+ useEffect(()=>{
+        console.log("tempratural statement" + temp)
+},[temp])
+
+```
+
+- ex:when color change
+
+```
+ useEffect(()=>{
+        console.log("tempratural statement" + temp)
+},[color])
+
+```

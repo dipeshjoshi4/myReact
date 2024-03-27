@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import "./Temp.css";
 import mobile from "./assests/last.png"
 
@@ -32,6 +32,10 @@ const Temp = () => {
 
         }
     };
+
+    useEffect(() => {
+        console.log("temp first" + temp)
+    }, [])
 
     return (
         <div className="temp">
