@@ -148,13 +148,26 @@ function getBook(id) {
 
 
 
-// ---------------------------------21.Ternaries Instead of if/else Statements-------------------------
+// ---------------------------------22.Arrow Function------------------------------
 
-const book = getBook(2)
-const { pages, title, hasMovieAdaptation } = book;
 
-const pagesRange = pages > 1000 ? "over a thousand " : "under thousand";
-console.log(`the book page is ${pages} so book is ${pagesRange}`)
+const book = getBook(1)
+const { author, title, publicationDate } = book;
 
-const movie = hasMovieAdaptation ? "yes it adaptionn" : "has not";
-console.log(movie)
+
+
+//Normal Function
+// function year(str) {
+//     return str.split("-")[0]
+// }
+
+//Arrow Function
+const year = (str) => str.split("-")[0];
+console.log(year(publicationDate))
+
+// const summaray = `${title} is name of book and the author  name is ${author} and i have ${5 + 6} copy and its relesed
+// on ${publicationDate.split("-")[0]}`
+
+const summaray = `${title} is name of book and the author  name is ${author} and i have ${5 + 6} copy and its relesed 
+on ${year(publicationDate)}`
+summaray;

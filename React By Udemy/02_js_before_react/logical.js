@@ -1,4 +1,5 @@
 
+
 const data = [
     {
         id: 1,
@@ -147,14 +148,66 @@ function getBook(id) {
 // console.log(getBook(2));
 
 
+///----------------------------------23. Short-Circuiting And Logical Operators: &&, ||, ??------------------
 
-// ---------------------------------21.Ternaries Instead of if/else Statements-------------------------
+// - in js some logical operator have a fetture of short-circuting
+
+// - it  means logical operator in certain condition return a first value without looking at second value
+
 
 const book = getBook(2)
-const { pages, title, hasMovieAdaptation } = book;
+book;
 
-const pagesRange = pages > 1000 ? "over a thousand " : "under thousand";
-console.log(`the book page is ${pages} so book is ${pagesRange}`)
+//in & Operator
 
-const movie = hasMovieAdaptation ? "yes it adaptionn" : "has not";
-console.log(movie)
+console.log(true && "some string")
+
+//short-circuting happen when in and oper.first value is false
+console.log(false && "some string")
+
+//so practise practically use take id no 2 book
+console.log(hasMovieAdaptation && "this book")
+
+//here is concept of truthy value and falsy value
+
+// falsy value => 0,'',null,undefined
+
+console.log(0 && "some string")
+console.log("dip" && "jonas")
+
+
+//in || Operator
+
+console.log(false || "some string")
+
+//here short-crcuit happen when first value is true
+console.log(true || "some string")
+
+//WHENEEVR SHORT-CRCUIT HAPPEN WE DO OTHER VALUE AS IF
+
+
+//Now take example of book id 1
+// console.log(book.translations.spanish)
+// const spanishTrans = book.translations.spanish || "NOT TRANSLATED";
+// spanishTrans
+
+//Now take example of book id 2
+// console.log(book.translations.spanish)
+// const spanishTrans = book.translations.spanish || "NOT TRANSLATED";
+// spanishTrans
+
+//some time OR(||) OPERATOR GIVE WRONG ANSWER BECAUSE SHORT-CRUCITING IN OR(||) HAPPEN WHEN FIRST VALUE IS TRUE
+
+console.log(book.reviews.librarything.reviewsCount); //0
+
+const countWrong = book.reviews.librarything.reviewsCount || "no data";
+
+countWrong; //no data
+
+//to solve this js relaese new operator called nullish coalescing operator
+
+const count = book.reviews.librarything.reviewsCount ?? "no data";
+count;
+console.log(count);
+
+//only return second value  when first value is null or undefined

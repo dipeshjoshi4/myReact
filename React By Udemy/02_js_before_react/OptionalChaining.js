@@ -1,3 +1,6 @@
+//-----------------------24. Optional Chaining-----------------------
+
+
 
 const data = [
     {
@@ -147,14 +150,7 @@ function getBook(id) {
 // console.log(getBook(2));
 
 
-
-// ---------------------------------21.Ternaries Instead of if/else Statements-------------------------
+//----------------------------------24. Optional Chaining----------------------------------------------
 
 const book = getBook(2)
-const { pages, title, hasMovieAdaptation } = book;
-
-const pagesRange = pages > 1000 ? "over a thousand " : "under thousand";
-console.log(`the book page is ${pages} so book is ${pagesRange}`)
-
-const movie = hasMovieAdaptation ? "yes it adaptionn" : "has not";
-console.log(movie)
+book;
