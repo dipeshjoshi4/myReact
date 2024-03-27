@@ -148,21 +148,96 @@ const data = [
 function getBooks() {
   return data;
 }
+// console.log(getBooks()); //whole array of object get
 
 function getBook(id) {
-  return data.find((d) => d.id === id);
+  return data.find((data) => data.id === id);
 }
+// console.log(getBook(2)); 
 
 
+//----------------------------------------------------------------------------------------------
 //Destructuring 
+//is a very helpfull when we need a data out of array or object
 
-//is a very helpfull when we need of data outof array or object
+//OBJECT
 
+//Normal Way 
+// const book = getBook(2);
+// const title = book.title;
+// const author = book.author;
+// console.log(title, author)
+
+//to take out data like this when we have to take out mutliplr data means thgat are the cumbercen
+
+//destructing way
+// const book = getBook(2);
+// const { author, title, pages, publicationDate, genres, hasMovieAdaptation } = book;
+// console.log(title, author, pages, publicationDate, genres, hasMovieAdaptation)
+
+//ARRAY
+
+//Normal Way 
+
+// so just like object are relying on propertyname ,its relied on the order of the element array
 
 const book = getBook(2);
-const title = book.title;
-title;
+const { author, genres } = book;
+console.log(genres)
 
 
+//Normal way
+
+// const primary = genres[0];
+// const secondary = genres[1];
+// console.log(primary, secondary);
+
+//destructring
+
+// const book = getBook(2);
+// const [primary, secondary] = genres;
+// console.log(primary, secondary);
 
 
+//----------------------------------------------------------------------------------------------
+//Rest and Spread
+
+
+//--------------------ARRAY------------------------
+
+//Rest Operaters 
+// const book = getBook(2);
+const [primary, secondary, ...otherGenres] = genres;
+console.log(primary, secondary, otherGenres);
+console.log(primary, secondary, otherGenres[1]);
+
+
+//spread 
+//question - lets create anew array and the new genres add to an end or start
+
+//Normal Way
+// const newgenres = [genres, 'epic science'];
+// newgenres;
+//but above info give us 2 different array in  array thats not we wnated
+
+//spread Operator Way
+// const newgenres = [...genres, 'epic science'];
+// newgenres;
+
+
+//--------------------OBJECT------------------------
+
+//SPREAD
+
+//question :add new key value pair of moviepublication date on object with help of spread
+
+
+const updateBook = {
+  ...book,
+  //adding new property
+  moviePublicationDate: "2022-12-19",
+
+  //update old property
+  pages: 1210
+};
+console.log(updateBook)
