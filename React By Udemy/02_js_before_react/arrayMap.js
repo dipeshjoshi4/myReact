@@ -1,4 +1,4 @@
-//-----------------------24. Optional Chaining-----------------------
+//-----------------------25.Arrays Map Method-----------------------
 
 
 
@@ -150,11 +150,21 @@ function getBook(id) {
 // console.log(getBook(2));
 
 
-//----------------------------------24. Optional Chaining----------------------------------------------
+//----------------------------------25.Arrays Map Method----------------------------------------------
 
-const book = getBook(3)
-book;
+//so what do map do ?
 
+//- map method loop over an array and return a new array with sam length with some opertion applied to each of the elements of the original array
+//- that callback function will be aplied on each of array element
+
+const x = [1, 2, 3, 4, 5].map((el) => el * 2)
+console.log(x)
+
+///get book object
+const books = getBooks();
+books;
+
+///get book reviecount
 function getReviewCount(book) {
     const goodreads = book.reviews.goodreads.reviewsCount;
     const librarything = book.reviews.librarything?.reviewsCount ?? 0;
@@ -162,22 +172,16 @@ function getReviewCount(book) {
     return goodreads + librarything;
 }
 
-console.log(getReviewCount(book));
+///get book reviewTitle
+const titles = books.map((book) => book.title)
+titles;
 
-//so here the problem is book.review.
-// error "cannot read properties of undefined(redaing"reviewsCount")"
-// librarything => are not mention in id 3 and that for we have use '?' to say morden js.just read reviewsCount
-//that nmethod called Optional chaining
-
-//syntax
-
-//normal way
-//const librarything = book.reviews.librarything.reviewsCount;
-
-//optional chaining way
-// const librarything = book.reviews.librarything?.reviewsCount;
-
-//STILL WE GET ANSWER NaN => for this situation we have one operter called
-
-//knowledge coalescing operator
-// const librarything = book.reviews.librarything?.reviewsCount??0;
+// get some essential data like => author,title,reviewcount
+const essintialData = books.map((book) => {
+    return {
+        title: book.title,
+        author: book.author,
+        review: getReviewCount(book)
+    }
+})
+essintialData;
