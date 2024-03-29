@@ -1680,8 +1680,8 @@ storgae
 
 ## 33. Rendering the Root Component and Strict Mode
 
-<details_Notes>
+<details>
 
 
 
-</details_Notes>
+</details>
