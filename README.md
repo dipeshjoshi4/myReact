@@ -1682,6 +1682,18 @@ storgae
 
 <details>
 
+- first of all delete all files and then Create with index.js 
+
+- and this time write 2 dependecy thta we write on the pure_react project folder
+
+- the dependecy are
+
+```
+
+```
+
+
+</details>
 
 
 </details>
