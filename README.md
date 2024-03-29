@@ -1662,9 +1662,10 @@ storgae
 
 # Section-5-Working With Components,props,and JSX
 
- <details> ## 32. section-overview  </details>
+## 32. section-overview 
 
-<summary>
+<details>
+  
 - core concept :components,props,jsx
 
 - creating and reusing components
@@ -1675,7 +1676,11 @@ storgae
 
 - start writing code on your own! by side by side devloping Developer Profile Card
 
-</summary>
+</details>
+
+
+
+
 
 ## 33. Rendering the Root Component and Strict Mode
 
