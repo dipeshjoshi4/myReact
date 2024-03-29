@@ -1,11 +1,6 @@
 
 <details>
-<summary>React Mech Code</summary>
-blah blah blah blah you found me!
-
-
-
-
+# <summary>React Mech Code</summary>
 
 # what is react? and why we need ?
 react is an open-source library for building a user interface(UI)
