@@ -152,3 +152,28 @@ book;
 
 
 //----------------------------------29. Working With Immutable Arrays----------------------------------------------
+
+// in react is very important to array will be immutable
+
+//so we have know thw hoe to update,delete or add data without disturb the originla array
+
+// how to add ,delete and update elements in the array
+
+//1. add a book object to array
+const newBook = {
+    id: 6,
+    title: "harry porter and chember of secets",
+    author: "j. k. rowling",
+}
+const booksAfterAdd = [...book, newBook]
+booksAfterAdd;
+
+//2. delete a book object from array 
+//in filter if the condition make it false it will be out of the filtter array and thats what we do 
+const booksAfterDelete = booksAfterAdd.filter((book) => book.id !== 3);
+booksAfterDelete
+
+//3. update a book object in array
+
+const booksAfterUpdate = booksAfterDelete.map((book) => book.id === 1 ? { ...book, pages: 1200 } : book);
+booksAfterUpdate;
