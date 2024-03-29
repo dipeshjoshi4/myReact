@@ -1689,10 +1689,8 @@ storgae
 - the dependecy are
 
 ```
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 
 ```
 
