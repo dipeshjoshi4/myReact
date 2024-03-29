@@ -1658,8 +1658,27 @@ storgae
 
 <details>
 
- <summary>React Udemy</summary>
+ <summary>React Udemy Notes</summary>
 
- dsjkaskjdjkldlsl
+# Section-5-Working With Components,props,and JSX
+
+ <details> ## 32. section-overview  </details>
+
+<summary>
+- core concept :components,props,jsx
+
+- creating and reusing components
+
+- Rendring lists
+
+- Conditional rendering
+
+- start writing code on your own! by side by side devloping Developer Profile Card
+
+</summary>
+
+## 33. Rendering the Root Component and Strict Mode
+
+
 
 </details>

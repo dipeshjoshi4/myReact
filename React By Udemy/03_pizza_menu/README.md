@@ -69,16 +69,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-# 32. section-overview
-
-- core concept :components,props,jsx
-
-- creating and reusing components
-
-- Rendring lists
-
-- Conditional rendering
-
-- start writing code on your own! by side by side devloping Developer Profile Card
-
-# 33. Rendering the Root Component and Strict Mode
