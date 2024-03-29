@@ -1,8 +1,8 @@
 
 <details>
-<summary>Cool Dropdown</summary>
+<summary>React Mech Code</summary>
 blah blah blah blah you found me!
-</details>
+
 
 
 
@@ -1657,3 +1657,5 @@ storgae
 },[color])
 
 ```
+
+</details>
