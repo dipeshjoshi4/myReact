@@ -1,8 +1,8 @@
 
-<React_Mech_Code>
+<details>
 <summary>Cool Dropdown</summary>
 blah blah blah blah you found me!
-</React_Mech_Code>
+<details>
 
 
 
