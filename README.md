@@ -1694,6 +1694,97 @@ import ReactDOM from 'react-dom/client';
 
 ```
 
+so this depedency we add from node modules with the import syntax so till now its js
+
+- now make component called app and then render the componenet by fetching root id element which is in index.html file
+
+- syntax of that making app component
+
+- this for REACT 18
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function App() {
+    return <h1>Hello React!</h1>
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render( 
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+    );
+```
+- before REACT 18
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function App() {
+    return <h1>Hello React!</h1>
+}
+
+React.render(<App />);
+
+```
+- and thats how we running the program with "npm start" command!
+
+- here in above code snippet we can clearly see root ellement get app and then render by index.js file with the help of React-dom so thats how our react code can run
+
+
+```
+what is the <React.StrictMode> ?
+```
+- so react strict mode is during development  running programm twice to find certain bugs.
+- and also React check we are not using react outdated api !
+
+
+</details>
+
+# 34. Before We Start Coding : Debugging
+
+<details>
+
+- always open terminal and browserr insepect  so that u wil find error
+- stackoverflow with date filtering answer
+- also restart app
+- any if your code not working and error not show see the final code and verify
+- also going in output and working and chek you extension is working or not if you feel like that 
+
+</details>
+
+# 35. Components as Building Blocks
+
+<details>
+
+- react is all about components
+
+### why there is component and why are they important ?
+
+- components are the most fundamental thing in react
+- react is entirly made of components
+- building block of user interface in React
+- react takes the components and draw them onto a webpage so onto user interface,or UI for short
+- react renders the view of each components and together all this componenets make up the user interface
+
+- so we can say thatb reat component is small piece of UI. and thats is own data and logic and appearance(how it works and how it looks)
+
+- so we building complex UI with multiple components and combining them like lego pieces
+
+- components can be reused  ,nested  inside  each other  and pass data between them
+
+</details>
+
+# 36. Creating And Reusing a Component
+
+<details>
+
+- first get start files
+
+
 
 </details>
 
