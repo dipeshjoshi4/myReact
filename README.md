@@ -1782,11 +1782,183 @@ what is the <React.StrictMode> ?
 
 <details>
 
-- first get start files
+- first get starter files from pizz-menu
 
+- making componenets and reusaiblity of components
 
+- in this section we make new components and make that componenet into App Function like this and we can resuvbale too
+
+```
+<!-- App Component -->
+function App() {
+    return (
+        <div>
+            <h1>Hello React!</h1>
+            <Pizza />
+            <Pizza />
+            <Pizza />
+        </div>
+    );
+}
+<!-- Pizaa Component -->
+function Pizza() {
+    return (
+        <div>
+            <img src="pizzas/spinaci.jpg" alt="pizza-spinaci" />
+            <h2>Pizza Spinaci</h2>
+            <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+        </div>
+    )
+}
+```
+</details>
+
+# 37. What Is JSX?
+
+<details>
+
+- componnets its piece of UI then we must have Knowledge about data,Logic,Appearance
+- how components looks like thats comes jsx
+
+- JSX
+
+- Declartive syntax to describe what components look like and how they work based on their data and their logic
+
+- to understand declartive approch we need to understand impertive approach
+
+- imperative 
+- -> its manual DOM element selections and DOM traversing
+- -> step by step mutations happen and reach the desired UI
+
+- Declartive
+- -> for many reason we have to provide good user experience so our UI will be very good with current data and time
+- -> so we have alredy declared how UI look as per data and data change and UI also change
+- -> an all this happen s withou DOM Manipulation at all through react. np classlist,queryselector,eventlistner.textcontent property
+- -> react is huge abstraction of DOM so we never touch the DOM Directly
+- -> in sted we reflaction of the current data and let react automatically syncornize with data
+
+- impertive => how to do thing
+
+- declative => what we want
+
+- components have must return a block of jsx with render by react and show us on components UI
+
+- jsx is an extension of js that allows us to embed Javascript CSS and React components into HTML
+
+```
+<div>
+    <h4 style = {{fontsize:"2.4em"}}>
+    <p>You are and Adult? </p>
+    <button onclick={ClickFun}>
+</div>
+
+```
+
+- jsx  into js converted by "babel tool" with automatically present in our create-react-app
+
+- jsx code
+
+```
+<header>
+    <h1 style="color:red">
+    Hello
+    </h1>
+</header>
+
+```
+- js code
+
+```
+React,createElement('header',null
+    React.createElement(
+        'h1',{style:{color:'red'}},'Hello React!'
+    )
+);
+
+```
+
+- Each jsx code convert into React.createElement function call
+
+- its convert is important because jsx  dont understand by browser
 
 </details>
 
+# 38. Creating More Componenets
+
+<details>
+
+- so whenever you make any component and write any html like in example : 
+
+```
+function Header(){
+    return
+    <p>we are now comonenet</p>
+}
+
+```
+- and that  Header component put into app  we render that and in Ui we see the our code and if inspect then 
+- we see that after render we can directly see <p> tag which is in header component
+- so browser dont know the its come from header because after react render its only show which is browser understnad and thats is html
+
+
+- we make new React Componenets of Our PIzaa Menu Project
+
+```
+function App() {
+    return (
+        <div>
+            <Header />
+            <Menu />
+            <Footer />
+        </div>
+    );
+}
+
+function Header() {
+    return <h1>Fast Pizza Company Co.</h1>
+
+}
+
+function Menu() {
+    return (
+        <div>
+            <h2>Our Menu</h2>
+            <Pizza />
+            <Pizza />
+            <Pizza />
+        </div>
+    )
+}
+
+function Footer() {
+    return (
+        <footer>
+            {new Date().toLocaleTimeString()}. we're Currently Open
+        </footer>
+    )
+
+    //without jsx code
+    //return React.creatElement("footer",null,"We are Currently Open")
+}
+
+function Pizza() {
+    return (
+        <div>
+            <img src="pizzas/spinaci.jpg" alt="pizza-spinaci" />
+            <h2>Pizza Spinaci</h2>
+            <p>Tomato, mozarella, spinach, and ricotta cheese</p>
+        </div>
+    )
+}
+
+```
+
+</details>
+
+# 39
+
+<details>
+
+</details>
 
 </details>
