@@ -1955,10 +1955,99 @@ function Pizza() {
 
 </details>
 
-# 39
-
+# 39 Javascript Logic In Componenets
 <details>
 
+- till now we write js inside jsx components that we returned
+
+- but componenets are js function so we can write any js in the components
+
+- so we can write code like this
+
+```
+function Footer() {
+
+    const hour = new Date().getHours();
+    const openHour = 12;
+    const closeHour = 23;
+    const isOpen = hour >= openHour && hour <= closeHour;
+    console.log(isOpen);
+
+    return (
+        <footer>
+            {new Date().toLocaleTimeString()}. we're Currently Open
+        </footer>
+    )
+}
+
+```
+</details>
+
+# 40. Separation of Concerns
+<details>
+
+- so first place we are learn as one file for js and html and css seprately
+
+- then SPA comes and js is more used and become more interactive With Html code
+
+- so now youn see that js(Logic) is titghtly couple with HTML elements() then why them keep seprated?
+
+- the answer of that is React Components + jsx
+
+- that fact is in modern web app componenets have logic and Ui so coupled and thats why  ,data and Apperance and logic in components
+
+- thats the fundamental reson is react is all about components
+
+- also in js and html code things we change together are wriet as close as possible in jsx(html,js) code 
+
+- react have concer of sepration .and react have some sepration but its about all componenets based sepratiuon for react
+
+</details>
+
+# 41. Styling React Applications
+<details>
+
+- learning easy way to style React Components
+
+- 2 way we add style in react components
+
+- 1. inline css
+
+```
+function Header() {
+   return <h1 style={{ color: "red", textTransform: "uppercase" }}>Fast Pizza Company Co.</h1>
+}
+```
+
+```
+function Header() {
+    const style = { color: "red", textTransform: "uppercase" }
+    return <h1 style={style}>Fast Pizza Company Co.</h1>
+}
+```
+
+- 2. external css
+
+- create same name of extrenal.css file and import in index.js file
+
+- and given class to element or componenet and make the styling
+
+- import "./index.css" is important
+
+- given className="header" insted of class="header"
+
+</details>
+
+# 42. Passing and Receiving Props
+<details>
+
+- 
+
+
+</details>
+
+# 43. 
+<details>
 </details>
 
 </details>
