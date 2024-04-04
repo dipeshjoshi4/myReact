@@ -2098,8 +2098,6 @@ function Pizza(props) {
 
 - props pass data from parent to child components
 
-<!-- <img src="./React By Udemy/03_pizza_menu/public/pizzas/focaccia.jpg" width="350" title="hover text"> -->
-
 - Essential tool to configure and customize components(like function parameters)
 
 - with props,parent components control how child components look and work
@@ -2111,11 +2109,11 @@ function Pizza(props) {
 
 ### props data type entry
 
-- <img src="./React By Udemy/Notes-photo/typeofdata-43.jpg" width="350" title="hover text">
+- <img src="./React By Udemy/Notes-photo/typeofdata-43.jpg" width="550" title="hover text">
 
 ### props are read-only
 
-- <img src="./React By Udemy/Notes-photo/read-only-43.jpg" width="350" title="hover text">
+- <img src="./React By Udemy/Notes-photo/read-only-43.jpg" width="550" title="hover text">
 
 - react always show UI with current data and that data is state and Props
 
@@ -2129,7 +2127,7 @@ function Pizza(props) {
 
 ### props one way data flow
 
-- <img src="./React By Udemy/Notes-photo/dataflow-43.jpg" width="350" title="hover text">
+ <img src="./React By Udemy/Notes-photo/dataflow-43.jpg" width="550" title="hover text">
 
 </details>
 
