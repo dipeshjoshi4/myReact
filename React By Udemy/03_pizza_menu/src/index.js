@@ -73,8 +73,7 @@ function Header() {
   return (
     <header className='header'>
       <h1>
-        Fast React
-        Pizza Co.
+        Fast React Pizza Co.
       </h1>
     </header>
   );
@@ -88,70 +87,48 @@ function Menu() {
       </h2>
       <Pizza
         Name='Pizza Spinaci'
-        ingradient='Tomato, mozarella, spinach, and ricotta cheese'
+        ingredients='Tomato, mozarella, spinach, and ricotta cheese'
         photoName='pizzas/spinaci.jpg'
-        Price='10'
+        Price={10}
+      />
+      <Pizza
+        Name='Pizza funghi'
+        ingredients='mashrooms, mozarella, funghi, and ricotta cheese'
+        photoName='pizzas/funghi.jpg'
+        Price={12}
       />
     </main>
   );
 }
 
-function Pizza(
-  props
-) {
-  console.log(
-    props
-  );
+function Pizza(props) {
   return (
-    <div>
-      <img
-        src='pizzas/spinaci.jpg'
-        alt='pizza-spinaci'
-      />
-      <h3>
-        Pizza
-        Spinaci
-      </h3>
-      <p>
-        Tomato,
-        mozarella,
-        spinach, and
-        ricotta
-        cheese
-      </p>
+    <div className="pizza">
+      <img src={props.photoName} alt={props.Name} />
+      <div>
+        <h3>{props.Name}</h3>
+        <p>{props.ingredients}</p>
+        <span>{props.Price}</span>
+      </div>
     </div>
   );
 }
 
 function Footer() {
-  const hour =
-    new Date().getHours();
+  const hour = new Date().getHours();
   const openHour = 12;
   const closeHour = 23;
-  const isOpen =
-    hour >=
-      openHour &&
-    hour <=
-      closeHour;
-  console.log(
-    isOpen
-  );
+  // const isOpen =hour >= openHour && hour <=closeHour;
+  // console.log(isOpen);
 
   return (
     <footer className='footer'>
-      {new Date().toLocaleTimeString()}
-      . we're
-      Currently Open
+      {new Date().toLocaleTimeString()} we're Currently Open
     </footer>
   );
 }
 
-const root =
-  ReactDOM.createRoot(
-    document.getElementById(
-      "root"
-    )
-  );
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

@@ -1956,8 +1956,8 @@ function Pizza() {
 </details>
 
 # 39 Javascript Logic In Componenets
-<details>
 
+<details>
 - till now we write js inside jsx components that we returned
 
 - but componenets are js function so we can write any js in the components
@@ -1984,8 +1984,8 @@ function Footer() {
 </details>
 
 # 40. Separation of Concerns
-<details>
 
+<details>
 - so first place we are learn as one file for js and html and css seprately
 
 - then SPA comes and js is more used and become more interactive With Html code
@@ -2041,12 +2041,79 @@ function Header() {
 # 42. Passing and Receiving Props
 <details>
 
-- 
+- its al, about how we pass data particularly parent to child components
 
+- so its a communication channel between parent and child 
+
+- props is a property and its main content written in parent and the name will be written from parent and write in child componenets
+
+- here parent is Menu Component and child is Pizza Component
+
+```
+function Menu() {
+  return (
+    <main className='menu'>
+      <h2>
+        Our Menu
+      </h2>
+      <Pizza
+        Name='Pizza Spinaci'
+        ingradient='Tomato, mozarella, spinach, and ricotta cheese'
+        photoName='pizzas/spinaci.jpg'
+        Price={10}
+      />
+    </main>
+  );
+}
+
+function Pizza(props) {
+  return (
+    <div className="pizza">
+
+      <img src={props.photoName} alt={props.Name} />
+      <div>
+        <h3>{props.Name}</h3>
+        <p>{props.ingredients}</p>
+        <span>{props.Price}</span>
+      </div>
+
+    </div>
+  );
+}
+
+```
+
+- if you see then menu componenets called the pizza component
+- so here child comp => pizza || parent compo => menu
+
+- now parent component have object propery as prop and child component have that propery takes and 
+
+- to given any number as props so you have write like this Price:{10} insted of Price:'10'
 
 </details>
 
-# 43. 
+
+# 43. Props, Immutability, and One-Way Data Flow
+<details>
+
+- props pass data from parent to child components
+
+![alt text](http://url/to/img.png)
+
+<img src="./React By Udemy/03_pizza_menu/public/pizzas/focaccia.jpg" width="350" title="hover text">
+
+- Essential tool to configure and customize components(like function parameters)
+
+- with props,parent components control how child components look and work
+
+- props are just arguments pass to regular js functions
+
+- and we can pass anytypes of value in js function so same as in props we can pass any kind of value
+  like : single values,arrays,objects,function and even other components
+
+</details>
+
+# 44. 
 <details>
 </details>
 
