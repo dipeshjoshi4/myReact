@@ -2098,9 +2098,7 @@ function Pizza(props) {
 
 - props pass data from parent to child components
 
-![alt text](http://url/to/img.png)
-
-<img src="./React By Udemy/03_pizza_menu/public/pizzas/focaccia.jpg" width="350" title="hover text">
+<!-- <img src="./React By Udemy/03_pizza_menu/public/pizzas/focaccia.jpg" width="350" title="hover text"> -->
 
 - Essential tool to configure and customize components(like function parameters)
 
@@ -2110,6 +2108,28 @@ function Pizza(props) {
 
 - and we can pass anytypes of value in js function so same as in props we can pass any kind of value
   like : single values,arrays,objects,function and even other components
+
+### props data type entry
+
+- <img src="./React By Udemy/Notes-photo/typeofdata-43.jpg" width="350" title="hover text">
+
+### props are read-only
+
+- <img src="./React By Udemy/Notes-photo/read-only-43.jpg" width="350" title="hover text">
+
+- react always show UI with current data and that data is state and Props
+
+- state is internal data that can be updated by the component's logic
+
+- but props comes from parent and it cant be updated in child and its onlu updated by parent
+
+- so props are Read only,they are immutable!
+
+- if u need  to mutate props,you can actully need state
+
+### props one way data flow
+
+- <img src="./React By Udemy/Notes-photo/dataflow-43.jpg" width="350" title="hover text">
 
 </details>
 
