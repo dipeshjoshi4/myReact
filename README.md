@@ -2131,8 +2131,11 @@ function Pizza(props) {
 
 </details>
 
-# 44. 
+# 44. CHALLENGE #1 profile Card(v1)
 <details>
+
+[Profile Card Link] (URL "https://codesandbox.io/p/sandbox/udemy-profile-card-vgnz8v")
+
 </details>
 
 </details>
