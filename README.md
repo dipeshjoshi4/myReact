@@ -2138,4 +2138,55 @@ https://codesandbox.io/p/sandbox/udemy-profile-card-vgnz8v?file=%2Fsrc%2Findex.j
 
 </details>
 
+# 45. The Rules of JSX
+
+<details>
+
+- many people find difficult to work with jsx ,let's See How JSX Rules
+
+- GENERALRULES
+
+- jsx is exactlt like HTML but we can {} with that we can "Javascript Mode" by using {}(For Text of attributes)
+
+- we can place js expression inside {}.
+
+- Examples:reference variables,create arrays or objects,[].map(),ternary operator
+
+- but not allwoed if...else,switch
+
+- superImportant
+
+- a piece of jsx produces a javascript Expression
+- a piece of jsx is like js
+- Example
+```
+const el = <h1>Hello React!</h1>
+const el = React.createElement("h1",null,"Hello React!");
+
+```
+- and that understable because we alredy learn jsx  is simple convert to create element function call,which is fact also calls an expression  
+
+- so this above line impact 2 major things
+
+- 1. we can places other piece of jsx inside {}
+
+- 2.  we can write JSX anywhere inside a component(in if/else,assign to varibles,pass it into functions)
+
+- a piece of jsx have only one root element . if you need more you cam <React.fragment> 
+
+- jsx vs html [photo from section 45 last seconds]
+
+<img src="./React By Udemy/Notes-photo/diff45.png" width="550" title="hover text">
+
+</details>
+
+# 46 Rendrings Lists
+<details>
+
+- by creating new array in parent and making a list of item and propery .its an array  or array of object
+
+- rendering means we have an array and we have to made one componenet of each element of the array
+
+</details>
+
 </details>

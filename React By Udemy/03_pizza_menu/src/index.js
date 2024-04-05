@@ -85,7 +85,10 @@ function Menu() {
       <h2>
         Our Menu
       </h2>
-      <Pizza
+      <div>
+        
+      </div>
+      {/* <Pizza
         Name='Pizza Spinaci'
         ingredients='Tomato, mozarella, spinach, and ricotta cheese'
         photoName='pizzas/spinaci.jpg'
@@ -96,7 +99,7 @@ function Menu() {
         ingredients='mashrooms, mozarella, funghi, and ricotta cheese'
         photoName='pizzas/funghi.jpg'
         Price={12}
-      />
+      /> */}
     </main>
   );
 }
