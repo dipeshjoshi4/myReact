@@ -70,11 +70,10 @@ function App() {
 }
 
 function Header() {
+  const style = {};
   return (
-    <header className='header'>
-      <h1>
-        Fast React Pizza Co.
-      </h1>
+    <header className='header footer'>
+      <h1 style={style}>Fast React Pizza Co. </h1>
     </header>
   );
 }
@@ -82,22 +81,26 @@ function Header() {
 function Menu() {
   return (
     <main className='menu'>
-      <h2>
-        Our Menu
-      </h2>
-      <div>
-        
-      </div>
+      <h2>Our Menu</h2>
+
+      <ul className="pizzas">
+        {
+          pizzaData.map(
+            (pizza) => (<Pizza pizzaObj={pizza} key={pizza.name } />)
+          )
+        }
+      </ul>
+
       {/* <Pizza
-        Name='Pizza Spinaci'
+        name='Pizza Spinaci'
         ingredients='Tomato, mozarella, spinach, and ricotta cheese'
-        photoName='pizzas/spinaci.jpg'
+        photoName='Pizzas/spinaci.jpg'
         Price={10}
       />
       <Pizza
-        Name='Pizza funghi'
-        ingredients='mashrooms, mozarella, funghi, and ricotta cheese'
-        photoName='pizzas/funghi.jpg'
+        name='Pizza Fungi'
+        ingredients='Tomato, mozarella, mushrooms, and onion'
+        photoName='Pizzas/funghi.jpg'
         Price={12}
       /> */}
     </main>
@@ -105,33 +108,41 @@ function Menu() {
 }
 
 function Pizza(props) {
+  console.log(props)
   return (
-    <div className="pizza">
-      <img src={props.photoName} alt={props.Name} />
+    <li className="pizza">
+      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
       <div>
-        <h3>{props.Name}</h3>
-        <p>{props.ingredients}</p>
-        <span>{props.Price}</span>
+        <h3>{props.pizzaObj.name}</h3>
+        <p>{props.pizzaObj.ingredients}</p>
+        <span>{props.pizzaObj.price}</span>
       </div>
-    </div>
+    </li>
   );
 }
 
 function Footer() {
-  const hour = new Date().getHours();
-  const openHour = 12;
-  const closeHour = 23;
+  // const hour = new Date().getHours();
+  // const openHour = 12;
+  // const closeHour = 23;
   // const isOpen =hour >= openHour && hour <=closeHour;
   // console.log(isOpen);
 
   return (
     <footer className='footer'>
-      {new Date().toLocaleTimeString()} we're Currently Open
+      {new Date().toLocaleTimeString()}{" "}
+      we're
+      Currently Open
     </footer>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root =
+  ReactDOM.createRoot(
+    document.getElementById(
+      "root"
+    )
+  );
 root.render(
   <React.StrictMode>
     <App />
