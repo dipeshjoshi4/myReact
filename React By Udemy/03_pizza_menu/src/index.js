@@ -79,30 +79,29 @@ function Header() {
 }
 
 function Menu() {
+  const pizzas = pizzaData
+  // const pizzas = [];
+  const lengthpizzas = pizzas.length;
+
   return (
     <main className='menu'>
       <h2>Our Menu</h2>
 
-      <ul className="pizzas">
-        {
-          pizzaData.map(
-            (pizza) => (<Pizza pizzaObj={pizza} key={pizza.name } />)
-          )
-        }
-      </ul>
+      {
+        lengthpizzas > 0 && (
+          <ul className="pizzas">
+            {
+              pizzaData.map((pizza) => (<Pizza pizzaObj={pizza} key={pizza.name} />))
+            }
+          </ul>
+        )
+      }
 
-      {/* <Pizza
-        name='Pizza Spinaci'
-        ingredients='Tomato, mozarella, spinach, and ricotta cheese'
-        photoName='Pizzas/spinaci.jpg'
-        Price={10}
-      />
-      <Pizza
-        name='Pizza Fungi'
-        ingredients='Tomato, mozarella, mushrooms, and onion'
-        photoName='Pizzas/funghi.jpg'
-        Price={12}
-      /> */}
+      {/* <ul className="pizzas">
+        {
+          pizzaData.map((pizza) => (<Pizza pizzaObj={pizza} key={pizza.name} />))
+        }
+      </ul> */}
     </main>
   );
 }
@@ -122,27 +121,27 @@ function Pizza(props) {
 }
 
 function Footer() {
-  // const hour = new Date().getHours();
-  // const openHour = 12;
-  // const closeHour = 23;
-  // const isOpen =hour >= openHour && hour <=closeHour;
-  // console.log(isOpen);
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 23;
+  const isOpen = hour >= openHour && hour <= closeHour;
+  console.log(isOpen);
 
   return (
     <footer className='footer'>
-      {new Date().toLocaleTimeString()}{" "}
-      we're
-      Currently Open
+      {
+        isOpen && (
+          <div className="order">
+            <p> We're Open Untill {closeHour}:00 come visit us or ordeonline.</p>
+            <button className="btn">Order</button>
+          </div>
+        )
+      }
     </footer>
   );
 }
 
-const root =
-  ReactDOM.createRoot(
-    document.getElementById(
-      "root"
-    )
-  );
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />

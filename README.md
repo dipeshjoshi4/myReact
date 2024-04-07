@@ -2187,6 +2187,89 @@ const el = React.createElement("h1",null,"Hello React!");
 
 - rendering means we have an array and we have to made one componenet of each element of the array
 
+- for rendering from array object always give id which is unique name fro every object of array
+
+- after the render list
+
+```
+ { 
+<ul className="pizzas">
+    {
+        pizzaData.map((pizza) => (<Pizza pizzaObj={pizza} key={pizza.name} />))
+    }
+</ul> 
+}
+
+```
+
+</details>
+
+# 47 Conditional rendering with &&
+
+<details>
+
+- rendering jsx or component
+
+- here Ex: open resturent or not
+
+- so its rendering jsx or whole component depend on conditions
+
+```
+function Menu() {
+  const pizzas = pizzaData
+  // const pizzas = [];
+  const lengthpizzas = pizzas.length;
+
+  return (
+    <main className='menu'>
+      <h2>Our Menu</h2>
+      {
+        lengthpizzas > 0 && (
+          <ul className="pizzas">
+            {
+              pizzaData.map((pizza) => (<Pizza pizzaObj={pizza} key={pizza.name} />))
+            }
+          </ul>
+        )
+      }
+    </main>
+  );
+}
+
+```
+
+- when we render the jsx element with && we always use truthy or falsy value 
+
+- when there is no truthy value the by the false value means shortcirucuit not happning and the zero will come up see this example
+
+```
+function Menu() 
+{
+  const pizzas = [];
+  const lengthpizzas = pizzas.length;
+  return 
+  (
+    <main className='menu'>
+      <h2>Our Menu</h2>
+      {
+        lengthpizzas > 0 && (
+          <ul className="pizzas">
+            {
+              pizzaData.map((pizza) => (<Pizza pizzaObj={pizza} key={pizza.name} />))
+            }
+          </ul>)
+      }
+    </main>
+  );
+}
+```
+-  so  after above code it show 0  .because when shortcruit not happen function return himself
+
+- shortcruit  Happens when  
+- in && value have truth then after && element code working
+- in || value have false then after || element code working
+
+
 </details>
 
 </details>
