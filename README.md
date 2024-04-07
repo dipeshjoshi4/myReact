@@ -2272,4 +2272,65 @@ function Menu()
 
 </details>
 
+#  48. Conditional Rendering With Ternaries
+
+<details>
+
+- for ternary operater
+
+```
+  {
+        lengthpizzas > 0 ? (
+          <ul className="pizzas">
+            {
+              pizzaData.map((pizza) => (<Pizza pizzaObj={pizza} key={pizza.name} />))
+            }
+          </ul>
+        ) : <p> we are working on this.thanks for visiting us latter </p>
+    }
+
+```
+- ternary operator have 3 parts conditions ? true : else
+
+</details>
+
+# 49. Conditional Rendering With Multiple Returns
+
+<details>
+
+```
+function Footer() {
+  const hour = new Date().getHours();
+  const openHour = 12;
+  const closeHour = 23;
+  const isOpen = hour >= openHour && hour <= closeHour;
+  console.log(isOpen);
+
+  if(!isOpen) return <p> CLOSED </p>
+
+  return (
+    <footer className='footer'>
+      {
+        isOpen ? (
+          <div className="order">
+            <p> We're Open Untill {closeHour}:00 come visit us or ordeonline.</p>
+            <button className="btn">Order</button>
+          </div>
+        ) : <p> we're happy to serve you between {openHour}:00 and {closeHour}:00</p>
+      }
+    </footer>
+  );
+}
+
+```
+
+- in this case we use to render the footer element when condition is not true then only we can give 2 return one in false and one in close
+
+- but its not good for whole componenet its good for the some piece of jsx rendering 
+
+
+
+
+</details>
+
 </details>
