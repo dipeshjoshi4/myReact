@@ -1660,6 +1660,7 @@ storgae
 
  <summary>React Udemy Notes</summary>
 
+<details>
 # Section-5-Working With Components,props,and JSX
 
 ## 32. section-overview 
@@ -2422,7 +2423,79 @@ function Pizza({pizzaObj}) {
 
 <details>
 
-- 
+- there is always one root element when there is more then two jsx code in fnction or component
+
+```
+ <main className='menu'>
+      <h2>Our Menu</h2>
+      {lengthpizzas > 0 ?
+        (
+          <div>
+            <p>Authentic  Italian Cuisine. 6 Creatives dishes to choose from. all from our store oven, all oraganic ,all delicious</p>
+
+            <ul className="pizzas">
+              {pizzaData.map((pizza) => (<Pizza pizzaObj={pizza} key={pizza.name} />))}
+            </ul>
+
+          </div>
+        ) : <p> we are working on this.thanks for visiting .come back latter </p>
+      }
+  </main>
+```
+
+- we want this two jsx element with different parent how let see. we use react fragment.
+
+- react fragment will be used as <>-----------</>
+
+```
+<>
+    <p>Authentic  Italian Cuisine. 6 Creatives dishes to choose from. all from our store oven, all oraganic ,all delicious</p>
+    <ul className="pizzas">
+        {pizzaData.map((pizza) => (<Pizza pizzaObj={pizza} key={pizza.name} />))}
+    </ul>
+</>
+
+```
+
+- some time we used to write key in react.fragment then you have to write like this
+
+<React.Fragment key ='unique value'>
+
+</React.Fragment>
+
+</details>
+
+# 53. Setting Classes and Text Conditionally
+
+<details>
+
+```
+  return (
+    <li className={`pizza ${pizzaObj.soldOut ? 'sold-out': ''}`}>
+      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
+      <div>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>{pizzaObj.soldOut ? 'SOLD OUT' : pizzaObj.price}</span>
+      </div>
+    </li>
+  );
+```
+
+- the first line was important how we add css on soldout pizza 
+
+</details>
+
+# 54 summeray
+
+<details> 
+</details>
+
+# 55 challange-2 profile card v2
+
+<details> 
+</details>
+
 
 </details>
 
