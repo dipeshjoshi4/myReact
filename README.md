@@ -2510,6 +2510,6 @@ function Pizza({pizzaObj}) {
 </details>
 
 
-</details>  <> (this for the section -6)
+</details>  <!-- (this for the section -6)--> 
 
-</details> <> (this for the React Udemy)
+</details> <!-- (this for the React Udemy)--> 
