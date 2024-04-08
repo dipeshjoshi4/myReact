@@ -2329,8 +2329,100 @@ function Footer() {
 
 - but its not good for whole componenet its good for the some piece of jsx rendering 
 
+</details>
 
+# 50. Extracting JSX Into a New Component
 
+<details>
+
+- we make componenet and make website but sometime after building componenet we feel like its too big then extract them and make new component and then componenet pass in the old componenet simple just like in menu componenet we pass pizza component
+
+</details>
+
+# 51. Destructuring Props
+
+<details>
+
+- every component have props wether you mention or not to avoid that
+
+- we can destructing props means to avoid props keyword in child componenet and mention the actul props name which is mention in parent componenet where all the props pass to do that
+
+- then we dont want to write any thing like props. direct write pizzaobj
+
+- this is parent component 
+
+```
+function Menu() {
+  const pizzas = pizzaData
+  // const pizzas = [];
+  const lengthpizzas = pizzas.length;
+
+  return (
+    <main className='menu'>
+      <h2>Our Menu</h2>
+
+      {lengthpizzas > 0 ?
+        (
+          <ul className="pizzas">
+          {pizzaData.map((pizza) => (<Pizza pizzaObj={pizza} key={pizza.name} />))}
+          </ul>
+        ) :
+        <p> we are working on this.thanks for visiting .come back latter </p>
+      }
+    </main>
+  );
+}
+
+```
+- now see child component without destructing props
+
+```
+function Pizza(props) {
+  console.log(props)
+
+  if (props.pizzaObj.soldOut) return null;
+
+  return (
+    <li className="pizza">
+      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name} />
+      <div>
+        <h3>{props.pizzaObj.name}</h3>
+        <p>{props.pizzaObj.ingredients}</p>
+        <span>{props.pizzaObj.price}</span>
+      </div>
+    </li>
+  );
+}
+
+```
+- after destructuring props
+
+```
+function Pizza({pizzaObj}) {
+  console.log(pizzaObj)
+
+  if (pizzaObj.soldOut) return null;
+
+  return (
+    <li className="pizza">
+      <img src={pizzaObj.photoName} alt={pizzaObj.name} />
+      <div>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>{pizzaObj.price}</span>
+      </div>
+    </li>
+  );
+}
+
+```
+</details>
+
+# 52. React Fragments
+
+<details>
+
+- 
 
 </details>
 
