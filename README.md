@@ -1660,7 +1660,7 @@ storgae
 
  <summary>React Udemy Notes</summary>
 
-# Section-5-Working With Components,props,and JSX
+# Section-5-Working With Components,props,and JSX (32-55) 3 practise project
 
 <details>
 
@@ -2499,5 +2499,17 @@ function Pizza({pizzaObj}) {
 
 
 </details>
+
+# Section-6 State Events and FormsInteractive Components (21 parts) (56-76)
+
+<details>
+
+# 56- Section Overview
+<details>
+
+</details>
+
+
+</details> // this for the section -6
 
 </details>
