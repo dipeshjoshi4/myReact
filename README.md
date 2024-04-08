@@ -2266,8 +2266,9 @@ function Menu()
 -  so  after above code it show 0  .because when shortcruit not happen function return himself
 
 - shortcruit  Happens when  
-- in && value have truth then after && element code working
-- in || value have false then after || element code working
+- in && value have if condition have false then giving first value at answer without looking at second value
+- in || value have if condition have true then giving first value at answer without looking at second value
+
 
 
 </details>

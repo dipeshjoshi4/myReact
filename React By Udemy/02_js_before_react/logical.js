@@ -150,7 +150,7 @@ function getBook(id) {
 
 ///----------------------------------23. Short-Circuiting And Logical Operators: &&, ||, ??------------------
 
-// - in js some logical operator have a fetture of short-circuting
+// - in js some logical operator have a feture of short-circuting
 
 // - it  means logical operator in certain condition return a first value without looking at second value
 
@@ -158,10 +158,8 @@ function getBook(id) {
 const book = getBook(2)
 book;
 
-//in & Operator
-
+//in && Operator
 console.log(true && "some string")
-
 //short-circuting happen when in and oper.first value is false
 console.log(false && "some string")
 
@@ -197,15 +195,11 @@ console.log(true || "some string")
 // spanishTrans
 
 //some time OR(||) OPERATOR GIVE WRONG ANSWER BECAUSE SHORT-CRUCITING IN OR(||) HAPPEN WHEN FIRST VALUE IS TRUE
-
 console.log(book.reviews.librarything.reviewsCount); //0
-
 const countWrong = book.reviews.librarything.reviewsCount || "no data";
-
 countWrong; //no data
 
 //to solve this js relaese new operator called nullish coalescing operator
-
 const count = book.reviews.librarything.reviewsCount ?? "no data";
 count;
 console.log(count);
