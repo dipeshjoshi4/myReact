@@ -2490,6 +2490,23 @@ function Pizza({pizzaObj}) {
 # 54 summeray
 
 <details> 
+
+- componenets are building blocks of any user interface of react
+
+- every componenet have their own data + js logic which is called JSX
+
+- jsx return from each componen and it decide what we will see in Ui
+
+- each parent com ponenet pass dat into child that called props
+
+- created list(list of the componenet same type) and looping over array and use map and get values
+
+- in order to do componenet all the time we do conditional rendering with use of ternary operator
+
+<img src="./React By Udemy/Notes-photo/section-summary.png" width="550" title="hover text">
+
+
+
 </details>
 
 # 55 challange-2 profile card v2
