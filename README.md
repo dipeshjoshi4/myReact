@@ -2537,7 +2537,47 @@ function Pizza({pizzaObj}) {
 </details>
 
 ### 57- Let's Build Steps Component
+
 <details>
+
+- making a  react component with npx creat-react-app
+
+- nad make static step-wise structure which gives dynamically msg .very basic structure
+
+</details>
+
+### 58- Handling Events The React Way
+
+<details>
+
+- handling event in the react way is straight forward
+
+- we are not used addevent listner because that is the impertive of of building UIS
+
+- we use declartive approcah so we dont manully selects dom elemets 
+
+- insted we use html inline event
+
+- we do like this
+
+```
+<button style={{ backgroundColor: '#7950f2', color: '#fff' }} onClick={()=>alert("previous")}>
+      Previous
+  </button>
+
+```
+- that turing into like this
+
+```
+<button style={{ backgroundColor: '#7950f2', color: '#fff' }} onClick={handlePrevious}>
+      Previous
+  </button>
+  
+```
+
+- this handle previous function never be called otherwise it will directly run the code
+
+- handleprevious above differently mention so that it will work on mouse click
 
 </details>
 
