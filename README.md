@@ -2524,6 +2524,21 @@ function Pizza({pizzaObj}) {
 ### 56- Section Overview
 <details>
 
+- make componenets interactive now
+
+- handling events
+
+- state to update UI
+
+- Building the forms the 'React Way'
+
+- Controlled the elements
+
+</details>
+
+### 57- Let's Build Steps Component
+<details>
+
 </details>
 
 
