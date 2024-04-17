@@ -2666,9 +2666,18 @@ const [step,setStep] = useState(1)
 ### 61. Don't Set State Manually!
 
 <details>
+- react has no way knowing that you are upodate a varible without setter function so you have to do set use when eevr you want to update
+</details>
 
-- 
+### 62. The Mechanics of State
 
+<details>
+
+<img src="./React By Udemy/Notes-photo/react-state-mechanisam-62-p1.png" width="550" title="hover text">
+<img src="./React By Udemy/Notes-photo/react-state-mechanisam-62-p2.png" width="550" title="hover text">
+<img src="./React By Udemy/Notes-photo/react-state-mechanisam-62-p3.png" width="550" title="hover text">
+<img src="./React By Udemy/Notes-photo/react-state-mechanisam-62-p4.png" width="550" title="hover text">
+ 
 
 </details>
 
