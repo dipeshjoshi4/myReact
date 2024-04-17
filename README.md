@@ -2505,8 +2505,6 @@ function Pizza({pizzaObj}) {
 
 <img src="./React By Udemy/Notes-photo/section-summary.png" width="550" title="hover text">
 
-
-
 </details>
 
 # 55 challange-2 profile card v2
@@ -2580,6 +2578,100 @@ function Pizza({pizzaObj}) {
 - handleprevious above differently mention so that it will work on mouse click
 
 </details>
+
+### 59- what is state in React ?
+
+<details>
+
+- Most important concepts. everything revolve around the state
+
+- what React developer need to learn about the state ?
+
+- section 59 image
+
+<img src="./React By Udemy/Notes-photo/state-intro-section-59-part-1.png" width="550" title="hover text">
+<img src="./React By Udemy/Notes-photo/state-intro-section-59-part-2.png" width="550" title="hover text">
+<img src="./React By Udemy/Notes-photo/state-intro-section-59-part-3.png" width="550" title="hover text">
+
+- when one single componenet render means that called view and all view mixed and then became user interface
+
+- Data and UI chnage interchnage and thats happen just because of react state
+
+<img src="./React By Udemy/Notes-photo/state-intro-section-59-part-4.png" width="550" title="hover text">
+
+- summarry what allows to user to do
+
+<img src="./React By Udemy/Notes-photo/state-intro-section-59-part-5.png" width="550" title="hover text">
+
+</details>
+
+### 60. Creating a State Variable With useState
+
+<details>
+
+- when you write useState then it automatically add |||  import{ useState } from "react";
+
+- useState() have function and as parameter its have his own default value in here it is useState(1)
+
+
+```
+const [step,setStep] = useState(1)
+```
+
+- 3 ways to use state in practise we have follow this 3 steps
+
+- 1. add a new state variable
+
+```
+  const [step, setStep] = useState(1);
+
+```
+
+- 2. then we usally use in code in jsx 
+
+```
+      <div className="numbers">
+        <div className={`${step >= 1 ? "active" : ""}`}>1</div>
+        <div className={`${step >= 2 ? "active" : ""}`}>2</div>
+        <div className={`${step >= 3 ? "active" : ""}`}>3</div>
+      </div>
+
+      <p className="message">
+        Step {step} : {messages[step - 1]}
+      </p>
+
+```
+
+- 3. then update piece of state in some event handler 
+
+```
+ function handlePrevious() {
+    if (step > 1) setStep(step - 1)
+  }
+
+  function handleNext() {
+    if (step < 3) setStep(step + 1)
+  }
+
+```
+
+- useState(1) => is called Hooks in React
+
+- we can identify hooks because its tsart with use Keyword
+
+- we can write hooks on the top of the function menas componenet not inside another function and loop
+
+</details>
+
+### 61. Don't Set State Manually!
+
+<details>
+
+- 
+
+
+</details>
+
 
 
 </details>  <!-- (this for the section -6)--> 
