@@ -2677,6 +2677,24 @@ const [step,setStep] = useState(1)
 <img src="./React By Udemy/Notes-photo/react-state-mechanisam-62-p2.png" width="550" title="hover text">
 <img src="./React By Udemy/Notes-photo/react-state-mechanisam-62-p3.png" width="550" title="hover text">
 <img src="./React By Udemy/Notes-photo/react-state-mechanisam-62-p4.png" width="550" title="hover text">
+
+- we dont manipulate dom directly react is declartive. if that is case then how we data and UI chnage for some event and some click
+
+- we all know answer is state but here we derived answer from another principal
+
+- so react re-rednering means call react component function again
+
+- so react re-rendering make a new updateded view each time
+
+- react preserve components state so time to time reredner does not effect
+
+- state is update -> component re-render. so when any event click in view .we update state with set function
+
+- so states change reredner componenet
+
+- so mechanicas of state is clear i hope.so whenever we want to update component view we update component state
+
+- so thats why there is say that "react reacts to state chnages by re-rendering the UI"
  
 
 </details>
