@@ -2699,6 +2699,12 @@ const [step,setStep] = useState(1)
 
 </details>
 
+### 63. Adding Another Piece of State
+<details>
+
+
+</details>
+
 
 
 </details>  <!-- (this for the section -6)--> 
