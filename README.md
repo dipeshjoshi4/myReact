@@ -2702,8 +2702,80 @@ const [step,setStep] = useState(1)
 ### 63. Adding Another Piece of State
 <details>
 
+- here we add new close button and new state which open and close whole jsx code
+
+- but when its open and close the main thing is its open on the same event where its close
+
+- thats why state is memory of react .no doubt how many time view update state start with old event
+
+- btw we can use react fragment <> </> for two or more then two element of jsx returns
 
 </details>
+
+### 64. React Developer Tools
+
+<details>
+
+- install react bdeveloper tool, extension then we get btwo tab just like console and network .....for react 2 new tab we get
+
+- by open it them and then we can chnage data like css and see how output happens
+
+</details>
+
+### 65. Updating State Based on Current State
+<details>
+
+- we updated the state varible based on the current value of that state
+
+```
+  const [step, setStep] = useState(1);
+  const [isOpen, setIsOpen] = useState(true)
+
+  function handlePrevious() {
+    if (step > 1) setStep( step - 1)
+  }
+
+  function handleNext() {
+    if (step < 3){
+      setStep( step + 1)
+      setStep( step + 1)
+    } 
+  }
+
+```
+
+- supposed after somedays we want to from step 1 to 3 for clicking one time next then above code not working
+
+- because there will be step +1 => 2 but next will be not counted because there will be no callback function which is stored a value
+
+- so for that we updated the state varible based on the current value of that state
+
+- so we need callback function each time
+
+```
+ function handlePrevious() {
+    if (step > 1) setStep((step) => step - 1)
+  }
+
+  function handleNext() {
+    if (step < 3) setStep((step) => step + 1)
+  }
+
+  <button className="close" onClick={() => setIsOpen((isOpen) => !isOpen)}>&times;</button>
+
+```
+
+</details>
+
+### 66. More Thoughts About State + State Guidelines
+
+
+<details>
+
+- 
+
+</details>
+
 
 
 
