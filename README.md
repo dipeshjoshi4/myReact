@@ -2772,7 +2772,42 @@ const [step,setStep] = useState(1)
 
 <details>
 
-- 
+- each componenet have their own one state so basically how many times we render the same component .so each render all compon have thgeri own independecy
+
+- so lets understand 
+
+- if in one app there 3 button and any button clicked counter increase with +1 
+
+- 1st button clciked the counter = 1
+- 2nd and 3rd  will be zero
+
+- so on component clicked will no effect to other 2 componenet or one componenet removed does not effect the other 2 componenent
+
+- state is always isolated in react
+
+- UI IS A FUNCTION OF STATE
+
+<img src="./React By Udemy/Notes-photo/sec-66-p-1.png" width="550" title="hover text">
+<img src="./React By Udemy/Notes-photo/sec-66-p-2.png" width="550" title="hover text">
+
+
+
+
+</details>
+
+### 67. A Vanilla JavaScript Implementation
+
+<details>
+
+- public > vanila.html is html-js code of our step program
+
+</details>
+
+### 68.Data Counter project (version-1)
+
+<details>
+
+
 
 </details>
 
