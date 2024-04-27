@@ -2611,8 +2611,13 @@ function Pizza({pizzaObj}) {
 
 - when you write useState then it automatically add |||  import{ useState } from "react";
 
+- if not then u manually add the code -> import {useState} from "react";
+
 - useState() have function and as parameter its have his own default value in here it is useState(1)
 
+- also usestate have given array so destructuring array and make Yourdata varble as state
+
+- here 
 
 ```
 const [step,setStep] = useState(1)
