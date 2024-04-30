@@ -2751,7 +2751,7 @@ const [step,setStep] = useState(1)
 
 - supposed after somedays we want to from step 1 to 3 for clicking one time next then above code not working
 
-- because there will be step +1 => 2 but next will be not counted because there will be no callback function which is stored a value
+- because there will be step + 1 => 2 but next will be not counted because there will be no callback function which is stored a value
 
 - so for that we updated the state varible based on the current value of that state
 
@@ -2777,16 +2777,18 @@ const [step,setStep] = useState(1)
 
 <details>
 
-- each componenet have their own one state so basically how many times we render the same component .so each render all compon have thgeri own independecy
+- each componenet have their own one state so basically how many times we render the same component .so each render all compon have their own independecy
 
 - so lets understand 
 
-- if in one app there 3 button and any button clicked counter increase with +1 
+- if in one app there 3 button and 3 componenets  and any button clicked counter increase with +1 
 
-- 1st button clciked the counter = 1
-- 2nd and 3rd  will be zero
+- 1st button clciked the counter increase with +1 and became 1
+- 2nd and 3rd  will be same as previous because there componenet and satte will be different
 
-- so on component clicked will no effect to other 2 componenet or one componenet removed does not effect the other 2 componenent
+- so 1st component clicked will no effected to other 2 componenet or 
+
+- out of three one componenet removed does not effect the other 2 componenent
 
 - state is always isolated in react
 
