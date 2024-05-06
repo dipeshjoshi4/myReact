@@ -2814,7 +2814,11 @@ const [step,setStep] = useState(1)
 
 <details>
 
+</details>
 
+### 69. Starting a New Project: The "Far Away" Travel List
+
+<details>
 
 </details>
 
